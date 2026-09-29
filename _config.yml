@@ -1,0 +1,15 @@
+title: 동네자판기
+description: 회사·학교·병원·무인매장 등 공간에 맞는 무인자판기 임대·설치·렌탈 상담
+url: "https://dkfmaqqhh-cyber.github.io"
+baseurl: "/dongne-vending"   # 전용 도메인 연결 시 "" 로 변경
+lang: ko
+timezone: Asia/Seoul
+permalink: /posts/:title/
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }

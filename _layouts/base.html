@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{% if page.title %}{{ page.title }} | {% endif %}동네자판기</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}"/>
+<link rel="canonical" href="{{ page.url | absolute_url }}"/>
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}"/>
+<meta property="og:description" content="{{ page.description | default: site.description | escape }}"/>
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"/>
+<meta property="og:url" content="{{ page.url | absolute_url }}"/>
+{% if page.thumbnail and page.thumbnail != "" %}<meta property="og:image" content="{{ page.thumbnail | absolute_url }}"/>{% else %}<meta property="og:image" content="{{ '/images/img_02_649dbf922e.png' | absolute_url }}"/>{% endif %}
+<link rel="icon" type="image/png" href="{{ '/images/img_01_be50aaa8bb.png' | relative_url }}"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"/>
+<link rel="stylesheet" href="{{ '/assets/post.css' | relative_url }}"/>
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}","author":{"@type":"Organization","name":"동네자판기"},"publisher":{"@type":"Organization","name":"동네자판기"},"mainEntityOfPage":"{{ page.url | absolute_url }}"}
+</script>
+{% endif %}
+</head>
+<body>
+<header class="bh"><div class="bw bh-in">
+<a class="bh-logo" href="{{ '/' | relative_url }}" aria-label="동네자판기 홈으로"><img src="{{ '/images/img_02_649dbf922e.png' | relative_url }}" alt="동네자판기 DONGNE VENDING" width="196" height="56"/></a>
+<nav class="bh-menu"><a href="{{ '/#types' | relative_url }}">자판기종류</a><a href="{{ '/#place' | relative_url }}">설치장소·사례</a><a href="{{ '/posts/' | relative_url }}">정보</a></nav>
+</div></header>
+<main>{{ content }}</main>
+<footer class="bf"><div class="bw">동네자판기 · 무인자판기 임대·설치·렌탈 상담 · 전화 <a href="tel:01079902378">010-7990-2378</a></div></footer>
+<div class="bmob"><a href="tel:01079902378">전화 바로 연결</a><a class="k" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">카톡 상담</a><a class="q" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적 신청</a></div>
+</body>
+</html>

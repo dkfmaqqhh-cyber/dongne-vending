@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /posts.json
+sitemap: false
+---
+[{% for post in site.posts %}{
+  "title": {{ post.title | jsonify }},
+  "url": {{ post.url | relative_url | jsonify }},
+  "date": {{ post.date | date: "%Y.%m.%d" | jsonify }},
+  "tag": {{ post.tag | jsonify }},
+  "cover": {{ post.cover | jsonify }},
+  "color": {{ post.color | default: "brown" | jsonify }},
+  "description": {{ post.description | jsonify }},
+  "thumbnail": {% if post.thumbnail and post.thumbnail != "" %}{{ post.thumbnail | relative_url | jsonify }}{% else %}""{% endif %}
+}{% unless forloop.last %},{% endunless %}{% endfor %}]

@@ -1,0 +1,24 @@
+---
+layout: base
+---
+{% capture src_up %}src="{{ '/images/uploads/' | relative_url }}{% endcapture %}
+<article class="pa">
+<div class="pa-cover c-{{ page.color | default: 'brown' }}"{% if page.thumbnail and page.thumbnail != "" %} style="background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.6)),url('{{ page.thumbnail | relative_url }}') center/cover"{% endif %}>
+<div class="bw pa-cover-in">
+<a class="pa-back" href="{{ '/posts/' | relative_url }}">← 정보 글 목록</a>
+<span class="pa-tag">{{ page.tag }}</span>
+<h1>{{ page.title }}</h1>
+<em>동네자판기 · {{ page.date | date: "%Y.%m.%d" }}</em>
+</div></div>
+<div class="bw pa-body">
+{% if page.description %}<p class="pa-lead">{{ page.description }}</p>{% endif %}
+<div class="pa-content">{{ content | replace: 'src="/images/uploads/', src_up }}</div>
+<div class="pa-cta"><strong>우리 공간에 맞는 자판기가 궁금하다면</strong><div>
+<a class="pa-btn chat" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">실시간 채팅 상담</a>
+<a class="pa-btn call" href="tel:01079902378">빠른 전화 연결</a>
+<a class="pa-btn quote" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적 신청</a>
+</div></div>
+{% assign others = site.posts | where_exp: "p", "p.url != page.url" %}
+{% if others.size > 0 %}<div class="pa-more"><h2>다른 정보 글</h2><div class="pl-grid">{% for p in others limit:3 %}{% include card.html p=p %}{% endfor %}</div></div>{% endif %}
+</div>
+</article>
