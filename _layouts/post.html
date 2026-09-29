@@ -12,7 +12,9 @@ layout: base
 </div></div>
 <div class="bw pa-body">
 {% if page.description %}<p class="pa-lead">{{ page.description }}</p>{% endif %}
+{% if page.summary and page.summary != "" %}<div class="pa-summary"><strong>핵심 요약</strong><p>{{ page.summary }}</p></div>{% endif %}
 <div class="pa-content">{{ content | replace: 'src="/images/uploads/', src_up }}</div>
+{% if page.faq and page.faq.size > 0 %}<section class="pa-faq"><h2>자주 묻는 질문</h2>{% for f in page.faq %}<details{% if forloop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</section>{% endif %}
 <div class="pa-cta"><strong>우리 공간에 맞는 자판기가 궁금하다면</strong><div>
 <a class="pa-btn chat" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">실시간 채팅 상담</a>
 <a class="pa-btn call" href="tel:01079902378">빠른 전화 연결</a>

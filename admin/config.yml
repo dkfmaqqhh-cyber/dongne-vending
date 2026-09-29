@@ -41,4 +41,13 @@ collections:
           - { label: 레드, value: red }
       - { label: "표지 사진 (선택)", name: thumbnail, widget: image, required: false }
       - { label: 요약 (검색 설명), name: description, widget: text, hint: "목록 카드와 검색 결과에 보이는 1~2문장" }
+      - { label: "핵심 요약 (선택)", name: summary, widget: text, required: false, hint: "글 맨 위에 박스로 표시. 질문에 바로 답하는 1~2문장 (AI 검색 노출용)" }
       - { label: 본문, name: body, widget: markdown }
+      - label: "자주 묻는 질문 (선택)"
+        name: faq
+        widget: list
+        required: false
+        hint: "본문 아래 FAQ로 표시되고 검색엔진용 FAQ 데이터로도 들어갑니다"
+        fields:
+          - { label: 질문, name: q, widget: string }
+          - { label: 답변, name: a, widget: text }
