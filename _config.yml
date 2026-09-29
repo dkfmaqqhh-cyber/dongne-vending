@@ -4,6 +4,7 @@ url: "https://dkfmaqqhh-cyber.github.io"
 baseurl: "/dongne-vending"   # 전용 도메인 연결 시 "" 로 변경
 lang: ko
 timezone: Asia/Seoul
+future: true   # 관리자에서 쓴 글이 시간대 차이로 숨겨지지 않도록
 permalink: /posts/:title/
 markdown: kramdown
 plugins:
