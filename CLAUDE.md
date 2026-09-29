@@ -17,7 +17,8 @@
 
 ## 파일 구조
 - `index.html` : 메인 한 페이지 (CSS·JS 인라인, 이미지는 `images/`). 수정 시 기존 레이아웃 유지, `</style>` 앞에 "NN차:" 주석 달아 CSS 덧붙이는 방식으로 작업해 옴
-- `_posts/*.md` : 정보 글 (front matter: title, date(날짜만), tag, cover(' / '로 줄바꿈), color(brown|orange|olive|navy|teal|red), thumbnail, description)
+- `_posts/*.md` : 정보 글 (front matter: title, date(날짜만), tag, cover(' / '로 줄바꿈), color(brown|orange|olive|navy|teal|red), thumbnail, description, summary(선택: 글 위 '핵심 요약' 박스), faq(선택: q/a 목록 → 본문 아래 FAQ + FAQPage JSON-LD))
+- 글 URL은 파일명 기준 `/posts/<slug>/` (예: /posts/rent-vs-lease/). 글 안 내부 링크는 `{{ '/posts/slug/' | relative_url }}` 형식
 - `posts/index.html` : 전체 글 목록 / `_layouts/post.html` : 글 페이지(하단 상담 버튼 3개 + 다른 글 3개)
 - `_layouts/base.html`, `_includes/card.html`, `assets/post.css` : 글 페이지 공통 틀
 - `posts.json` : 메인 '정보' 섹션(#info)이 최신 6개를 fetch 해서 카드로 표시
@@ -50,10 +51,19 @@
 - 광고·홍보성 문구 배제, 정보성·후기성 글(SEO+AEO+GEO 통합형)
 - 지어낸 후기·수치를 실제처럼 쓰지 않는다. 현재 설치 후기 4개(김**, 박**, 이**, 최**)는 실제 후기인지 사용자 확인 필요
 - 확인 필요 항목: '방문 접수' 표현, 제주 P호텔 사진의 브랜드 로고 노출, 푸터 사업자정보(아직 임시 문구)
-- 연습 글 `_posts/2026-09-29-1.md`(제목 '1')는 사용자가 연습으로 올린 것 — 삭제 여부는 사용자에게 확인
+- 연습 글 '1'은 사용자가 삭제함(2026-09-29)
+- 법령·기준 수치는 공공자료로 확인한 것만 쓰고 글 하단 <small>참고: …</small>에 출처 표기
 
 ## 다음에 할 만한 일
 - 푸터 상호·사업자정보 입력
-- 연습 글 정리, 실제 정보 글 추가(주제·제목 제안)
+- 정보 글은 사용자와 번갈아 작성(사용자: 현장·후기형 / Claude: 비교·체크리스트형 제안). 새 글은 기존 글 목록 확인 후 주제 겹치지 않게, 초안 확인 후 게시
+- 새 글 형식: 한 줄 결론(summary) + 비교표 + 질문형 소제목 + FAQ 3개 + 관련 글 2개 링크
 - 네이버 서치어드바이저·구글 서치콘솔 등록(사이트맵 제출)
 - 전용 도메인 연결(유료) 시 baseurl/CNAME 변경
+
+## SEO·AI 노출 보완 이력 (2026-09-29)
+- 메인: og:image 절대경로, canonical·og:url·og:site_name, Organization·WebSite·FAQPage JSON-LD, 비교·배출방식 이미지 alt 상세화
+- 글 틀: 핵심 요약 박스, 글별 FAQ + FAQPage JSON-LD, Article JSON-LD에 image·logo 추가, 표 스타일(`assets/post.css` 끝)
+- CMS: '핵심 요약', '자주 묻는 질문' 입력 칸 추가
+- 정보 글 6개 전면 보강. 사용한 공공자료: 식품자동판매기영업 신고 제외 기준(소비기한 1개월 이상 완제품, 과천시 신고 안내), 냉장 0~10℃·냉동 -18℃ 이하·신선편의식품 5℃ 이하(식약처 안내, 식품저널 2022.12.21), 학교 고카페인 음료 판매 금지 2018.9.14(서울시 보건환경연구원)
+- 남은 과제: 푸터 사업자정보(임시 문구 노출 중), 설치 후기 진위 확인, 글 대표 이미지(thumbnail) 없음, 메인 정보 섹션은 JS 로딩, 서치어드바이저·서치콘솔 인증 태그 없음
