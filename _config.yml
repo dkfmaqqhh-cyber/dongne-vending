@@ -13,3 +13,5 @@ exclude:
 defaults:
   - scope: { path: "", type: posts }
     values: { layout: post }
+  - scope: { path: "admin" }
+    values: { sitemap: false }
