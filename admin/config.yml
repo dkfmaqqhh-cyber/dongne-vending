@@ -22,7 +22,7 @@ collections:
     fields:
       - { label: 레이아웃, name: layout, widget: hidden, default: post }
       - { label: 제목, name: title, widget: string }
-      - { label: 날짜, name: date, widget: datetime }
+      - { label: 날짜, name: date, widget: datetime, time_format: false, format: 'YYYY-MM-DD' }
       - label: 분류
         name: tag
         widget: select
