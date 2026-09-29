@@ -2115,6 +2115,11 @@ html{scroll-behavior:smooth}
 .pi-cover.has-img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))}
 .pi-cover.has-img strong{position:relative}
 .pi-empty{grid-column:1/-1;text-align:center;color:#7a6252}
+
+/* 메뉴 3개 - 좁은 화면 보정 */
+@media (max-width:420px){.menu a{font-size:12.5px !important;padding:7px 8px !important;letter-spacing:-.3px}.brand-img img{height:30px !important}.nav{gap:6px !important}.menu{gap:4px !important}}
+@media (max-width:380px){header .wrap.nav{padding-left:10px !important;padding-right:10px !important}.menu a{font-size:12px !important;padding:6px 7px !important}.brand-img img{height:26px !important}}
+@media (max-width:340px){.menu a{font-size:11px !important;padding:5px 6px !important}.brand-img img{height:22px !important}}
 </style>
 </head>
 <body>
@@ -2122,7 +2127,7 @@ html{scroll-behavior:smooth}
 <div class="wrap nav">
 <a class="brand brand-img" href="#" aria-label="동네자판기 홈으로"><img src="images/img_02_649dbf922e.png" alt="동네자판기 DONGNE VENDING" width="196" height="56"/></a>
 <div class="menu-area">
-<nav class="menu"><a href="#types">자판기종류</a><a href="#place">설치장소·사례</a></nav>
+<nav class="menu"><a href="#types">자판기종류</a><a href="#place">설치장소·사례</a><a href="#info">정보</a></nav>
 </div>
 </div>
 </header>
