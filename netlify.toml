@@ -2,6 +2,8 @@
 [build]
   command = "bundle exec jekyll build --config _config.yml,_config_netlify.yml"
   publish = "_site"
+  # 크레딧 절약: 사이트에 안 보이는 파일(인수인계 문서·README)만 바뀐 경우 배포를 건너뜀
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)CLAUDE.md' ':(exclude)README.md'"
 
 [build.environment]
   JEKYLL_ENV = "production"
