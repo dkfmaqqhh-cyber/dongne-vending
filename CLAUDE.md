@@ -74,7 +74,8 @@
 - 글 틀: 핵심 요약 박스, 글별 FAQ + FAQPage JSON-LD, Article JSON-LD에 image·logo 추가, 표 스타일(`assets/post.css` 끝)
 - CMS: '핵심 요약', '자주 묻는 질문' 입력 칸 추가
 - 정보 글 6개 전면 보강. 사용한 공공자료: 식품자동판매기영업 신고 제외 기준(소비기한 1개월 이상 완제품, 과천시 신고 안내), 냉장 0~10℃·냉동 -18℃ 이하·신선편의식품 5℃ 이하(식약처 안내, 식품저널 2022.12.21), 학교 고카페인 음료 판매 금지 2018.9.14(서울시 보건환경연구원)
-- 남은 과제: 서치어드바이저·서치콘솔 인증 태그 없음(사용자가 코드 주면 head에 추가, 사이트맵 sitemap.xml + RSS rss.xml 제출)
+- 네이버 서치어드바이저 인증 태그(naver-site-verification b84886c7…) index.html·base.html head에 추가(2026-09-30, 대표 주소 myvending24.netlify.app 기준)
+- 남은 과제: 구글 서치콘솔 인증 태그 없음(사용자가 코드 주면 head에 추가, 사이트맵 sitemap.xml + RSS rss.xml 제출)
 - 관리자 페이지(admin/index.html)에 front matter(sitemap: false) 추가해 사이트맵에서 제외
 
 ## 작업 방법 메모
