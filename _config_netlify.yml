@@ -3,4 +3,4 @@
 baseurl: ""
 # Netlify 사이트 주소가 정해지면 url에 넣기 (예: "https://dongne-vending.netlify.app")
 # 비워 두면 Netlify 쪽 sitemap.xml 주소만 불완전해지고, 사이트 화면·링크에는 영향 없음
-url: ""
+url: "https://myvending24.netlify.app"
