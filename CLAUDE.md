@@ -76,7 +76,7 @@
 - 정보 글 6개 전면 보강. 사용한 공공자료: 식품자동판매기영업 신고 제외 기준(소비기한 1개월 이상 완제품, 과천시 신고 안내), 냉장 0~10℃·냉동 -18℃ 이하·신선편의식품 5℃ 이하(식약처 안내, 식품저널 2022.12.21), 학교 고카페인 음료 판매 금지 2018.9.14(서울시 보건환경연구원)
 - 네이버 서치어드바이저 인증 태그(naver-site-verification b84886c7…) index.html·base.html head에 추가(2026-09-30, 대표 주소 myvending24.netlify.app 기준)
 - 네이버 서치어드바이저: 소유확인 완료, robots.txt 수집 확인, 웹 페이지 수집 요청 8개(메인·/posts/·글 6개)·사이트맵·RSS 제출 완료(2026-09-30). 색인 상태 확인은 수집 전이라 결과 없음 → 며칠 뒤 재확인. 새 글 올리면 '요청 → 웹 페이지 수집'에 글 주소 넣기 권장
-- 구글 서치콘솔: URL 접두어 방식(https://myvending24.netlify.app/), HTML 파일 인증 `googlef5d28c5141ab1faa.html`(루트, 삭제 금지) 추가(2026-09-30). 다음: 확인 → Sitemaps에 sitemap.xml 제출
+- 구글 서치콘솔: URL 접두어 방식(https://myvending24.netlify.app/), HTML 파일 인증 `googlef5d28c5141ab1faa.html`(루트, 삭제 금지) 추가(2026-09-30). 사용자가 HTML 태그 방식으로 확인해서 google-site-verification 메타태그(PThl-v7p…)도 index.html·base.html head에 추가. 다음: 확인 → Sitemaps에 sitemap.xml 제출
 - 관리자 페이지(admin/index.html)에 front matter(sitemap: false) 추가해 사이트맵에서 제외
 
 ## 작업 방법 메모
