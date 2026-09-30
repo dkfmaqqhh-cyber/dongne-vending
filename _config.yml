@@ -4,7 +4,7 @@ url: "https://dkfmaqqhh-cyber.github.io"
 baseurl: "/dongne-vending"   # 전용 도메인 연결 시 "" 로 변경
 # 대표 주소(검색엔진에 알려줄 정식 주소). canonical·og·RSS·robots가 모두 이 주소를 씀.
 # GitHub Pages와 Netlify 두 곳에 배포돼도 대표 주소는 하나로 유지해야 중복 문서로 보지 않음
-main_url: "https://dkfmaqqhh-cyber.github.io/dongne-vending"
+main_url: "https://myvending24.netlify.app"
 lang: ko
 timezone: Asia/Seoul
 future: true   # 관리자에서 쓴 글이 시간대 차이로 숨겨지지 않도록
