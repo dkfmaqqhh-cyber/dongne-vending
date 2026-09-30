@@ -8,6 +8,8 @@
 - 글 관리자(Sveltia CMS): https://dkfmaqqhh-cyber.github.io/dongne-vending/admin/  (GitHub fine-grained 토큰, dongne-vending 저장소 Contents: Read and write)
 - 배포: GitHub Pages (main 브랜치 / root, Jekyll 자동 빌드). 푸시 후 1~3분 뒤 반영
 - 빌드 확인: `curl -s "https://api.github.com/repos/dkfmaqqhh-cyber/dongne-vending/actions/runs?per_page=1"`
+- Netlify 동시 배포(준비 완료, 2026-09-30): `netlify.toml`(빌드 `bundle exec jekyll build --config _config.yml,_config_netlify.yml`, publish `_site`), `Gemfile`(github-pages 젬), `_config_netlify.yml`(baseurl "", url은 Netlify 주소 정해지면 입력). 사용자가 Netlify에서 저장소 연결 예정 — 첫 빌드 로그 확인 필요(로컬에서 Jekyll 빌드는 rubygems 차단으로 검증 못 함)
+- 대표 주소: `_config.yml`의 `main_url` 하나로 canonical·og:url·og:image·JSON-LD·RSS·robots 전부 관리. 현재 GitHub Pages 주소. 대표 주소를 Netlify(또는 전용 도메인)로 바꾸려면 main_url만 수정
 - 같은 계정의 다른 저장소 `spacereborn-site` = '오늘의 철거'(onulcheolgeo.kr) 사이트. 섞지 말 것.
 
 ## 연락·상담 링크 (전부 반영됨)
