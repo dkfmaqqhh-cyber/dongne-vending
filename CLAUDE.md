@@ -21,7 +21,9 @@
 - 글 URL은 파일명 기준 `/posts/<slug>/` (예: /posts/rent-vs-lease/). 글 안 내부 링크는 `{{ '/posts/slug/' | relative_url }}` 형식
 - `posts/index.html` : 전체 글 목록 / `_layouts/post.html` : 글 페이지(하단 상담 버튼 3개 + 다른 글 3개)
 - `_layouts/base.html`, `_includes/card.html`, `assets/post.css` : 글 페이지 공통 틀
-- `posts.json` : 메인 '정보' 섹션(#info)이 최신 6개를 fetch 해서 카드로 표시
+- `index.html`은 맨 위에 front matter(layout: null)가 있어 Jekyll이 처리함(97차). 메인 '정보' 섹션(#info) 카드 6개는 Liquid(`site.posts limit:6`)로 HTML에 직접 생성 — fetch 스크립트 제거. `posts.json`은 남아 있지만 메인에서 안 씀
+- `rss.xml` : RSS 2.0 피드(최근 30개, 네이버 서치어드바이저 RSS 제출용). base.html·index.html head에 rss 링크
+- 로컬 미리보기는 Liquid 처리가 필요 → python-liquid로 index.html 렌더 후 확인(작업 방법 메모 참고)
 - `admin/index.html`, `admin/config.yml` : Sveltia CMS (날짜는 date-only로 저장하도록 설정)
 - `_config.yml` : baseurl `/dongne-vending`, timezone Asia/Seoul, `future: true`, jekyll-sitemap. 전용 도메인 연결 시 baseurl "" + CNAME 추가
 - `robots.txt` : /admin/ 제외, sitemap 링크
@@ -68,10 +70,17 @@
 - 글 틀: 핵심 요약 박스, 글별 FAQ + FAQPage JSON-LD, Article JSON-LD에 image·logo 추가, 표 스타일(`assets/post.css` 끝)
 - CMS: '핵심 요약', '자주 묻는 질문' 입력 칸 추가
 - 정보 글 6개 전면 보강. 사용한 공공자료: 식품자동판매기영업 신고 제외 기준(소비기한 1개월 이상 완제품, 과천시 신고 안내), 냉장 0~10℃·냉동 -18℃ 이하·신선편의식품 5℃ 이하(식약처 안내, 식품저널 2022.12.21), 학교 고카페인 음료 판매 금지 2018.9.14(서울시 보건환경연구원)
-- 남은 과제: 메인 정보 섹션은 JS 로딩, 서치어드바이저·서치콘솔 인증 태그 없음, 메인 이미지 lazy loading 미적용(선택)
+- 남은 과제: 서치어드바이저·서치콘솔 인증 태그 없음(사용자가 코드 주면 head에 추가, 사이트맵 sitemap.xml + RSS rss.xml 제출)
 - 관리자 페이지(admin/index.html)에 front matter(sitemap: false) 추가해 사이트맵에서 제외
 
 ## 작업 방법 메모
+- index.html에 Liquid가 있으므로 로컬 화면 확인 시 `pip install --break-system-packages python-liquid` 후 site.posts를 _posts front matter로 만들어 렌더(relative_url 필터는 '/dongne-vending' 붙이기)
 - 화면 확인: 저장소 폴더에서 `python3 -m http.server 8765` 후 Playwright(PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers)로 스크린샷. 모바일은 390×844 뷰포트 한 화면으로 찍을 것(구역 전체 캡처는 고정 헤더·하단 바가 중간에 찍혀 오해 생김). `html{scroll-behavior:auto}` 넣고 스크롤
 - 작업 공간에서는 구글 폰트가 막혀 스크린샷 글씨체가 실제와 다를 수 있음
 - 푸시 후 빌드 확인은 위 curl 명령으로 head_sha 일치 + success 확인
+
+## 키워드 조화·기술 보완 이력 (2026-09-30, 97차)
+- 대표 키워드 연결: 글 description에 '무인자판기' 1회씩, 스마트 글에 '스마트 밴딩머신' 병기, 설치 과정 글 제목 "자판기 설치 절차와 기간…", 렌탈 글 제목 "자판기 렌탈·임대·구매 차이…" + 소제목에 '자판기 렌탈·임대/구매', 공간별 글에 아파트·오피스텔 / 무인매장·PC방 소제목 추가, 쇼케이스 소제목 보강
+- 메인 H2 문구: "무인자판기 설치하면 달라지는", "무인자판기 실제 설치 현장을", "무인자판기 설치는 이렇게 진행됩니다", "자판기 설치 전 많이 묻는 질문"
+- 메인 이미지 31개 loading="lazy" decoding="async"(로고·첫 화면 사진 제외)
+- 다음 추천: 설치사례 16곳 지역별 후기형 글(사용자), '자판기 렌탈·설치 비용을 좌우하는 요소' 글(Claude 차례)
