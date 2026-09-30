@@ -2,6 +2,9 @@ title: 동네자판기
 description: 회사·학교·병원·무인매장 등 공간에 맞는 무인자판기 임대·설치·렌탈 상담
 url: "https://dkfmaqqhh-cyber.github.io"
 baseurl: "/dongne-vending"   # 전용 도메인 연결 시 "" 로 변경
+# 대표 주소(검색엔진에 알려줄 정식 주소). canonical·og·RSS·robots가 모두 이 주소를 씀.
+# GitHub Pages와 Netlify 두 곳에 배포돼도 대표 주소는 하나로 유지해야 중복 문서로 보지 않음
+main_url: "https://dkfmaqqhh-cyber.github.io/dongne-vending"
 lang: ko
 timezone: Asia/Seoul
 future: true   # 관리자에서 쓴 글이 시간대 차이로 숨겨지지 않도록
@@ -12,6 +15,11 @@ plugins:
 exclude:
   - README.md
   - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - netlify.toml
+  - _config_netlify.yml
+  - vendor
 defaults:
   - scope: { path: "", type: posts }
     values: { layout: post }

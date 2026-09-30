@@ -5,4 +5,4 @@ sitemap: false
 User-agent: *
 Allow: /
 Disallow: /admin/
-Sitemap: {{ "/sitemap.xml" | absolute_url }}
+Sitemap: {{ site.main_url }}/sitemap.xml

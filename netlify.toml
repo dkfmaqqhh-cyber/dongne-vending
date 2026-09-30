@@ -1,0 +1,14 @@
+# 동네자판기 Netlify 배포 설정
+[build]
+  command = "bundle exec jekyll build --config _config.yml,_config_netlify.yml"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "3.3.6"
+
+# 관리자 페이지는 검색엔진에 노출하지 않음
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

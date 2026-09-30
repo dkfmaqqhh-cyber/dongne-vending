@@ -1,0 +1,6 @@
+# Netlify 배포 전용 설정 (_config.yml 위에 덮어씀)
+# Netlify 주소는 루트(/)로 열리므로 baseurl을 비움
+baseurl: ""
+# Netlify 사이트 주소가 정해지면 url에 넣기 (예: "https://dongne-vending.netlify.app")
+# 비워 두면 Netlify 쪽 sitemap.xml 주소만 불완전해지고, 사이트 화면·링크에는 영향 없음
+url: ""

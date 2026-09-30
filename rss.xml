@@ -7,15 +7,15 @@ sitemap: false
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>{{ site.title | xml_escape }} 자판기 설치·운영 정보</title>
-<link>{{ '/' | absolute_url }}</link>
+<link>{{ site.main_url }}/</link>
 <description>{{ site.description | xml_escape }}</description>
 <language>ko-KR</language>
-<atom:link href="{{ '/rss.xml' | absolute_url }}" rel="self" type="application/rss+xml"/>
+<atom:link href="{{ site.main_url }}/rss.xml" rel="self" type="application/rss+xml"/>
 <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 {% for post in site.posts limit:30 %}<item>
 <title>{{ post.title | xml_escape }}</title>
-<link>{{ post.url | absolute_url }}</link>
-<guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+<link>{{ site.main_url }}{{ post.url }}</link>
+<guid isPermaLink="true">{{ site.main_url }}{{ post.url }}</guid>
 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 <category>{{ post.tag | xml_escape }}</category>
 <description>{{ post.description | xml_escape }}</description>
