@@ -2142,6 +2142,32 @@ html{scroll-behavior:smooth}
 .flow-card strong{margin-top:2px}
 .flow-card p{margin-top:2px}
 @media (max-width:640px){.process-flow{max-width:none}.flow-card{padding:13px 16px}}
+/* 100차: FAQ 아래 전화 상담 바 + 특징 4칸 */
+.bc-section{padding:8px 0 64px;background:var(--bg-lightest,#fdfaf4)}
+.bc-card{background:#fff;border-radius:28px;padding:14px;box-shadow:0 18px 40px rgba(70,55,43,.10);border:1px solid #efe4d2}
+.bc-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;border-radius:20px;background:#f5eee1}
+.bc-text span{display:block;font-size:15px;color:#7a6252;margin-bottom:4px}
+.bc-num{display:block;font-size:38px;font-weight:800;letter-spacing:.5px;color:#2f241d;text-decoration:none;line-height:1.2;white-space:nowrap}
+.bc-btns{display:flex;gap:10px;flex-shrink:0}
+.bc-btn{display:inline-flex;align-items:center;justify-content:center;min-width:132px;height:56px;padding:0 22px;border-radius:14px;font-size:17px;font-weight:800;text-decoration:none}
+.bc-btn.call{background:var(--orange,#ff5b14);color:#fff;box-shadow:0 10px 22px rgba(255,91,20,.22)}
+.bc-btn.ask{background:#fff;color:#2f241d;border:1.5px solid #e3d4bf}
+.bc-feats{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bc-feats li{background:#fff;border:1px solid #efe4d2;border-radius:16px;padding:18px 14px;text-align:center;font-size:16px;color:#7a6252;word-break:keep-all}
+.bc-feats b{color:#2f241d;font-weight:800}
+@media (max-width:760px){
+  .bc-section{padding:4px 0 44px}
+  .bc-card{border-radius:22px;padding:10px}
+  .bc-inner{flex-direction:column;align-items:stretch;padding:20px 18px;gap:14px}
+  .bc-num{font-size:30px}
+  .bc-btns{width:100%}
+  .bc-btn{flex:1;min-width:0;height:52px;font-size:16px}
+  .bc-feats{gap:8px;margin-top:10px}
+  .bc-feats li{padding:14px 8px;font-size:14px}
+}
+.bc-btn{white-space:nowrap}
+.bc-feats li{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 4px}
+@media (max-width:340px){.bc-num{font-size:26px}.bc-btn{padding:0 10px;font-size:15px}.bc-feats li{font-size:13px}}
 </style>
 </head>
 <body>
@@ -2558,6 +2584,21 @@ html{scroll-behavior:smooth}
 <details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-text">카드 결제가 되나요?</span><span class="faq-arrow" aria-hidden="true"></span></summary><div class="faq-answer"><span class="faq-a">A</span><p>자판기 사양에 따라 카드 및 간편결제 시스템을 구성할 수 있습니다.</p></div></details>
 <details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-text">설치 비용은 얼마인가요?</span><span class="faq-arrow" aria-hidden="true"></span></summary><div class="faq-answer"><span class="faq-a">A</span><p>자판기 종류, 수량, 설치 위치와 현장 조건에 따라 달라지므로 상담 후 정확하게 안내해드립니다.</p></div></details>
 </div>
+</div>
+</section>
+<!-- 100차: FAQ 아래 전화 상담 바 + 특징 4칸 -->
+<section class="bc-section" aria-label="설치·견적 전화 상담">
+<div class="wrap">
+<div class="bc-card"><div class="bc-inner">
+<div class="bc-text"><span>설치·견적 전화 상담</span><a class="bc-num" href="tel:01079902378">010-7990-2378</a></div>
+<div class="bc-btns"><a class="bc-btn call" href="tel:01079902378">전화 걸기</a><a class="bc-btn ask" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">문의 남기기</a></div>
+</div></div>
+<ul class="bc-feats">
+<li><b>24인치</b> 터치 키오스크</li>
+<li><b>4개 국어</b> 화면 지원</li>
+<li>설치일부터 <b>3년 무상 A/S</b></li>
+<li><b>1080×1920</b> 매장 광고 송출</li>
+</ul>
 </div>
 </section>
 </main>
