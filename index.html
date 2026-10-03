@@ -2185,6 +2185,18 @@ html{scroll-behavior:smooth}
 .h2-status-row{margin-bottom:18px}
 /* 107차: 첫 화면 버튼 문구 길어짐 → 줄바꿈 방지 */
 .h2-actions .h2-btn{white-space:nowrap}
+/* 108차: 첫 화면 상태 문구를 전광판처럼 오른쪽→왼쪽으로 흐르게 + '2대 이상 설치 시 할인 가능' 이동 */
+.h2-status-row{display:block}
+.h2-top>*{min-width:0}
+.h2-panel{min-width:0}
+.h2-status{display:flex;width:100%;min-width:0}
+.h2-status i{flex:0 0 9px}
+.h2-ticker{position:relative;flex:1;min-width:0;overflow:hidden;white-space:nowrap;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 22px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 22px),transparent 100%)}
+.h2-ticker-track{display:inline-flex;width:max-content;animation:h2ticker 16s linear infinite}
+.h2-ticker-track>span{padding-right:56px}
+.h2-ticker:hover .h2-ticker-track{animation-play-state:paused}
+@keyframes h2ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.h2-ticker-track{animation:none}.h2-ticker-track>span+span{display:none}.h2-ticker{white-space:normal}}
 </style>
 </head>
 <body>
@@ -2206,11 +2218,11 @@ html{scroll-behavior:smooth}
 </div>
 <div class="h2-panel">
 <div class="h2-status-row">
-<span class="h2-status"><i></i>전국 설치 가능 · 무료 견적</span>
+<span class="h2-status"><i></i><span class="h2-ticker" aria-label="전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능"><span class="h2-ticker-track" aria-hidden="true"><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span></span></span></span>
 </div>
 <h1 class="h2-title">우리 공간에 맞는<br/>무인자판기</h1>
 <p class="h2-sub">상품 구성부터 설치까지, 쉽고 빠르게 안내해드립니다.</p>
-<p class="h2-price"><span class="h2-price-main">설치비 포함 <b>23만 원</b>부터</span><span class="h2-price-note">2대 이상 설치 시 할인</span></p>
+<p class="h2-price"><span class="h2-price-main">설치비 포함 <b>23만 원</b>부터</span></p>
 <div class="h2-tiles">
 <div class="h2-tile"><span class="h2-tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></svg></span><span>카드·간편결제</span></div>
 <div class="h2-tile"><span class="h2-tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></span><span>24시간 판매</span></div>
