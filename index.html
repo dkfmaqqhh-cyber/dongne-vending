@@ -2197,6 +2197,10 @@ html{scroll-behavior:smooth}
 .h2-ticker:hover .h2-ticker-track{animation-play-state:paused}
 @keyframes h2ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.h2-ticker-track{animation:none}.h2-ticker-track>span+span{display:none}.h2-ticker{white-space:normal}}
+/* 109차: 가격 상자 크기 축소 */
+.h2-price-main{padding:6px 12px;border-radius:10px;font-size:14px}
+.h2-price-main b{font-size:16px}
+@media (max-width:760px){.h2-price-main{padding:6px 11px;font-size:13.5px}.h2-price-main b{font-size:15px}}
 </style>
 </head>
 <body>
