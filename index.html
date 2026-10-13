@@ -2201,6 +2201,11 @@ html{scroll-behavior:smooth}
 .h2-price-main{padding:6px 12px;border-radius:10px;font-size:14px}
 .h2-price-main b{font-size:16px}
 @media (max-width:760px){.h2-price-main{padding:6px 11px;font-size:13.5px}.h2-price-main b{font-size:15px}}
+/* 110차: 하단 정보 */
+.site-foot{background:#201914;color:#cbb9a6;font-size:13.5px;line-height:1.7;padding:30px 0 34px}
+.site-foot p{margin:0}.site-foot a{color:#fff}
+.site-foot .sf-name{color:#fff;font-weight:800;font-size:15px;margin-bottom:4px}
+.site-foot .sf-links{margin-top:8px}.site-foot .sf-copy{margin-top:8px;color:#8f7d6c;font-size:12.5px}
 </style>
 </head>
 <body>
@@ -2350,11 +2355,11 @@ html{scroll-behavior:smooth}
 <small>신선식품과 냉장·냉동 상품 판매에 적합한 쇼케이스형입니다.</small>
 </span>
 </button>
-<button class="vm-machine-option" data-alt="굿즈 &amp; 담배 밴딩머신" data-desc="굿즈·담배 등 특화 상품에 맞춰 구성하는 맞춤형 자판기입니다." data-image="images/img_08_41f37782a3.jpg" data-title="굿즈 &amp; 담배 밴딩머신" type="button">
-<span class="vm-machine-option-thumb"><img alt="굿즈 &amp; 담배 밴딩머신" src="images/img_08_41f37782a3.jpg" loading="lazy" decoding="async"/></span>
+<button class="vm-machine-option" data-alt="굿즈 밴딩머신" data-desc="굿즈·캐릭터 상품 등 특화 상품에 맞춰 구성하는 맞춤형 자판기입니다." data-image="images/img_08_41f37782a3.jpg" data-title="굿즈 밴딩머신" type="button">
+<span class="vm-machine-option-thumb"><img alt="굿즈 밴딩머신" src="images/img_08_41f37782a3.jpg" loading="lazy" decoding="async"/></span>
 <span class="vm-machine-option-text">
-<strong>굿즈 &amp; 담배 밴딩머신</strong>
-<small>굿즈·담배 등 특화 상품에 맞춰 구성하는 맞춤형 자판기입니다.</small>
+<strong>굿즈 밴딩머신</strong>
+<small>굿즈·캐릭터 상품 등 특화 상품에 맞춰 구성하는 맞춤형 자판기입니다.</small>
 </span>
 </button>
 </div>
@@ -2624,7 +2629,13 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 </main>
-<!-- 96차: 임시 푸터 문구 삭제(사업자정보 확정 시 footer 다시 추가) -->
+<!-- 110차: 하단 정보(상호·연락처·개인정보 처리방침). 사업자정보 확정 시 .sf-biz에 추가 -->
+<footer class="site-foot"><div class="wrap">
+<p class="sf-name">동네자판기</p>
+<p class="sf-biz">무인자판기 설치·임대·렌탈 상담 · 전화 <a href="tel:01079902378">010-7990-2378</a></p>
+<p class="sf-links"><a href="{{ '/privacy/' | relative_url }}"><b>개인정보 처리방침</b></a></p>
+<p class="sf-copy">© 2026 동네자판기</p>
+</div></footer>
 <div class="mobilebar">
 <a href="tel:01079902378">전화 바로 연결</a><a class="mb-kakao" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">카톡 상담</a>
 <a href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적받기</a>
