@@ -2209,6 +2209,9 @@ html{scroll-behavior:smooth}
 /* 113차: 지역별 설치 안내 링크 */
 .case-area-link{text-align:center;margin:14px 0 0}
 .case-area-link a{font-size:15px;font-weight:800;color:#3b2a20;text-decoration:underline;text-underline-offset:4px}
+/* 115차: 가격 상자 잘 보이게 — 밝은 크림 바탕 + 진한 글씨 + 오렌지 금액 */
+.h2-price-main{background:#fff4e6;border:1px solid #ffd3b5;color:#3b2a20;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.h2-price-main b{color:#ff5b14;font-weight:900}
 </style>
 </head>
 <body>
@@ -2640,7 +2643,7 @@ html{scroll-behavior:smooth}
 <p class="sf-links"><a href="{{ '/area/' | relative_url }}">지역별 설치 안내</a> · <a href="{{ '/privacy/' | relative_url }}"><b>개인정보 처리방침</b></a></p>
 <p class="sf-copy">© 2026 동네자판기</p>
 </div></footer>
-{% include float-cta.html min=901 %}
+{% include float-cta.html min=901 after=600 %}
 <div class="mobilebar">
 <a href="tel:01079902378">전화 바로 연결</a><a class="mb-kakao" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">카톡 상담</a>
 <a href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적받기</a>
