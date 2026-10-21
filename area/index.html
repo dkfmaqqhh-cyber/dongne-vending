@@ -1,0 +1,92 @@
+---
+layout: base
+title: 지역별 자판기 설치 안내 — 서울·경기·인천·강원·충청·전라·경상·제주
+description: 서울·경기·인천·강원·충청·전라·경상·제주 등 지역별 무인자판기 설치 안내와 실제 설치사례를 모았습니다. 전국 어디서나 같은 방식으로 상담을 진행합니다.
+regions:
+  - id: seoul
+    name: 서울
+    sub: 서울특별시 전 지역
+    cases: []
+  - id: gyeonggi
+    name: 경기
+    sub: 수원·성남·고양·용인·화성·부천·하남·양주 등
+    cases:
+      - {name: "화성 A 코인노래방", type: "코인노래방", img: "img_32_76f08a1776.jpg"}
+      - {name: "하남 S 치과의원", type: "병원", img: "img_34_cc8e4586a0.jpg"}
+      - {name: "양주 A 키즈카페", type: "키즈카페", img: "img_36_yangju_kids.jpg"}
+      - {name: "부천 A 탕후루 매장", type: "매장", img: "img_30_a90cc0825a.jpg"}
+  - id: incheon
+    name: 인천
+    sub: 인천광역시 전 지역
+    cases:
+      - {name: "인천 A 무인카페", type: "무인카페", img: "img_35_incheon_cafe.jpg"}
+  - id: gangwon
+    name: 강원
+    sub: 춘천·원주·강릉·속초 등
+    cases: []
+  - id: chungcheong
+    name: 충청·대전·세종
+    sub: 청주·천안·대전·세종 등
+    cases:
+      - {name: "청주 A 무인카페", type: "무인카페", img: "img_19_a77959a9aa.jpg"}
+  - id: jeolla
+    name: 전라·광주
+    sub: 광주·전주·정읍·목포·여수 등
+    cases:
+      - {name: "정읍 A 회사 구내식당", type: "구내식당", img: "img_23_0ea373b620.jpg"}
+      - {name: "목포 A PC카페", type: "PC카페", img: "img_29_ada5bd47eb.jpg"}
+  - id: gyeongsang
+    name: 경상·대구·부산·울산
+    sub: 대구·구미·김천·안동·창원·부산·울산 등
+    cases:
+      - {name: "대구 A 호텔", type: "호텔", img: "img_24_37d1749c09.jpg"}
+      - {name: "대구 A 병원", type: "병원", img: "img_20_c2a21810f4.jpg"}
+      - {name: "대구 B 학원", type: "학원", img: "img_38_daegu_academy.jpg"}
+      - {name: "대구 A 무인 탁구매장", type: "무인매장", img: "img_27_84535feed1.jpg"}
+      - {name: "구미 A 제조회사 1동", type: "공장", img: "img_25_5659117821.jpg"}
+      - {name: "구미 A 제조회사 2동", type: "공장", img: "img_26_aaecf82ff7.jpg"}
+      - {name: "구미 A 애견카페", type: "카페", img: "img_28_4550fbe456.jpg"}
+      - {name: "김천 A 회사 사무실", type: "사무실", img: "img_21_0c01321191.jpg"}
+      - {name: "안동 A 무인카페", type: "무인카페", img: "img_31_81a31d74fd.jpg"}
+      - {name: "창원 A 여자고등학교", type: "학교", img: "img_22_5c1b8be6bc.jpg"}
+  - id: jeju
+    name: 제주
+    sub: 제주시·서귀포시
+    cases:
+      - {name: "제주 P 호텔", type: "호텔", img: "img_33_f4a546b28a.jpg"}
+      - {name: "제주 H 상점", type: "매장", img: "img_37_jeju_shop.jpg"}
+faq:
+  - q: "우리 지역도 자판기 설치가 되나요?"
+    a: "네, 동네자판기는 전국 설치가 가능합니다. 설치 지역(시·군·구)과 설치 장소, 공간 사진을 알려주시면 일정과 조건을 안내해드립니다."
+  - q: "멀리 있는 지역은 설치 비용이 더 드나요?"
+    a: "설치 장소까지의 거리와 일정, 반입 조건에 따라 조건이 달라질 수 있습니다. 정확한 내용은 지역과 공간 정보를 받은 뒤 상담에서 안내해드립니다."
+  - q: "설치사례가 없는 지역도 상담할 수 있나요?"
+    a: "네, 설치사례가 없는 지역도 같은 방식으로 상담과 설치를 진행합니다. 이 페이지의 사례는 실제 설치된 곳 중 일부입니다."
+---
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+</script>
+<section class="pl ar"><div class="bw">
+<div class="pl-eyebrow">INSTALL AREA</div>
+<h1>지역별 자판기 설치 안내</h1>
+<p class="pl-sub">동네자판기는 <b>전국 설치</b>가 가능합니다. 지역마다 실제 설치된 곳을 모았으니, 우리 지역과 비슷한 공간의 사례를 확인해 보세요.</p>
+<nav class="ar-jump" aria-label="지역 바로가기">{% for r in page.regions %}<a href="#{{ r.id }}">{{ r.name }}</a>{% endfor %}</nav>
+{% for r in page.regions %}
+<section class="ar-region" id="{{ r.id }}">
+<div class="ar-head"><h2>{{ r.name }} 자판기 설치</h2><span>{{ r.sub }}</span></div>
+{% if r.cases.size > 0 %}
+<p class="ar-note">{{ r.name }} 지역 설치사례 {{ r.cases.size }}곳</p>
+<div class="ar-cases">{% for c in r.cases %}<figure><img src="{{ '/images/' | append: c.img | relative_url }}" alt="{{ c.name }} 자판기 설치 사진" loading="lazy" decoding="async"/><figcaption><em>{{ c.type }}</em>{{ c.name }}</figcaption></figure>{% endfor %}</div>
+{% else %}
+<p class="ar-empty">{{ r.name }} 지역도 설치와 상담이 가능합니다. 설치 지역과 공간 사진을 보내주시면 일정과 구성을 안내해드립니다.</p>
+{% endif %}
+</section>
+{% endfor %}
+<section class="pa-faq ar-faq"><h2>자주 묻는 질문</h2>{% for f in page.faq %}<details{% if forloop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</section>
+<div class="pa-cta"><strong>우리 지역, 우리 공간에 맞는 자판기가 궁금하다면</strong><div>
+<a class="pa-btn chat" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">실시간 채팅 상담</a>
+<a class="pa-btn call" href="tel:01079902378">빠른 전화 연결</a>
+<a class="pa-btn quote" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적 신청</a>
+</div></div>
+<p class="ar-more">공간별 설치 방법은 <a href="{{ '/posts/' | relative_url }}">자판기 설치·운영 정보</a>에서 더 볼 수 있습니다.</p>
+</div></section>
