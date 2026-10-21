@@ -48,6 +48,7 @@
 
 ## PC 떠 있는 상담 버튼(112차, 2026-10-14)
 - `_includes/float-cta.html`(CSS 포함): 오른쪽 아래 고정 세로 3개 — 카카오톡 상담(노랑)·무료 견적받기(오렌지, 네이버폼)·전화 상담(브라운, tel). 같은 폭(168px)
+- 위치 bottom:84px(114차: 넷리파이 무료 플랜 "Powered by Netlify" 배지가 오른쪽 아래에 떠서 겹침 → 위로 올림. 배지는 Project configuration > General > Powered by Netlify badge에서 끌 수 있음)
 - PC에서만 표시: 메인 `{% include float-cta.html min=901 %}`(모바일 하단바가 900px 이하), 글·처리방침 페이지 base.html `min=641`(bmob이 640px 이하)
 - 로컬 렌더 스크립트(scratchpad render.py)는 Jekyll include를 정규식으로 처리하도록 수정함
 
