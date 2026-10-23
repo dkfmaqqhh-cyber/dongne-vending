@@ -133,7 +133,7 @@
 - 네이버 서치어드바이저: 소유확인 완료, robots.txt 수집 확인, 웹 페이지 수집 요청 8개(메인·/posts/·글 6개)·사이트맵·RSS 제출 완료(2026-09-30). 색인 상태 확인은 수집 전이라 결과 없음 → 며칠 뒤 재확인. 새 글 올리면 '요청 → 웹 페이지 수집'에 글 주소 넣기 권장
 - 구글 서치콘솔: URL 접두어 방식(https://myvending24.netlify.app/), HTML 파일 인증 `googlef5d28c5141ab1faa.html`(루트, 삭제 금지) 추가(2026-09-30). 사용자가 HTML 태그 방식으로 확인해서 google-site-verification 메타태그(PThl-v7p…)도 index.html·base.html head에 추가. 다음: 확인 → Sitemaps에 sitemap.xml 제출
 - 관리자 페이지(admin/index.html)에 front matter(sitemap: false) 추가해 사이트맵에서 제외
-- 2026-10-23: 네이버 웹 페이지 수집 요청 6개 완료(/area/, /area/gyeongsang/, /area/gyeonggi/, /area/jeju/, /area/jeolla/, /posts/hotel-vending/). 구글 색인 요청은 할당량 초과로 못 함 → 다음 날 다시 시도(사이트맵 제출돼 있으면 자동 수집도 됨)
+- 2026-10-23: 네이버 웹 페이지 수집 요청 6개 완료(/area/, /area/gyeongsang/, /area/gyeonggi/, /area/jeju/, /area/jeolla/, /posts/hotel-vending/). 구글 색인 요청은 할당량 초과로 못 함 → 다음 날 다시 시도(사이트맵 제출돼 있으면 자동 수집도 됨). 같은 날 네이버 수집 요청 2개 추가 완료(/posts/hospital-vending/, /posts/baseball-vending/). 구글 남은 요청 8개: /area/, hotel·hospital·baseball 글, 지역 4개
 
 ## 작업 방법 메모
 - index.html에 Liquid가 있으므로 로컬 화면 확인 시 `pip install --break-system-packages python-liquid` 후 site.posts를 _posts front matter로 만들어 렌더(relative_url 필터는 '/dongne-vending' 붙이기)
