@@ -66,6 +66,12 @@
 - 다음(보류): 첫 화면 사진을 실제 설치사례(예: 제주 P호텔 수영장 앞)+장소 표시로 교체 — 사용자가 원본 고화질 사진 찾는 중(현재 사례 사진은 가로 300~420px라 부족)
 - 320px 하단 고정바 글자 줄바꿈(78px) 수정 → 한 줄(51px)
 
+## 지역별 상세 페이지(118차, 2026-10-23 사용자 승인: 절충안)
+- 사례 있는 4개 지역만 상세 페이지: /area/gyeongsang/(대구·경북·경남, 10곳) /area/gyeonggi/(경기 4곳+인천 언급) /area/jeju/(2곳) /area/jeolla/(전라·광주 2곳). 파일 area/<id>.md, 레이아웃 `_layouts/area.html`(사례 사진·본문·함께 볼 글·지역 FAQ+FAQPage·BreadcrumbList JSON-LD·상담 버튼·다른 지역 링크)
+- 사례 데이터는 `_data/areas.yml` 하나로 관리(허브 /area/와 상세 페이지 공용). 새 사례 → areas.yml + 메인 #case에 추가. 상세 페이지 있는 지역은 `page:` 값 → 허브에 '자세히 →' 링크
+- 원칙: 지역명만 바꾼 복제 페이지 금지(구글 도어웨이 정책). 지역마다 실제 사례·업종별 내용·지역 FAQ가 달라야 함. 2~3개월 서치콘솔 확인 후 사례 생긴 지역부터 확장
+- 키워드 → 주소 매핑: 무인자판기 설치/임대·렌탈 → / | 지역별 자판기 설치 → /area/ | 대구·구미·경북 자판기 설치 → /area/gyeongsang/ | 경기(화성·하남·부천) 자판기 설치 → /area/gyeonggi/ | 제주 자판기 설치 → /area/jeju/ | 광주·전라 자판기 설치 → /area/jeolla/ | 호텔 자판기 → /posts/hotel-vending/ | 자판기 설치 비용 → /posts/cost-factors/ | 자판기 렌탈·임대·구매 → /posts/rent-vs-lease/ | 스마트·키오스크 자판기 → /posts/smart-vs-basic/ | 냉장·냉동 자판기 → /posts/freezer-showcase/ | 자판기 설치 절차 → /posts/install-process/ | 회사·학교·병원 자판기 상품 → /posts/items-by-space/ | 설치 전 확인 → /posts/check-before-install/ | (예정) 병원 자판기, 골프장 자판기
+
 ## 작성자 표시(117차, 2026-10-23)
 - 정보 글 표지에 '동네자판기 담당자 박시연 · 날짜'(사용자 지정). `_config.yml` author_name/author_role로 관리, Article JSON-LD author=Person(worksFor 동네자판기)
 - 글 수정 시 front matter `last_modified_at: YYYY-MM-DD` 넣으면 표지에 '· 수정 날짜' 표시 + JSON-LD dateModified 반영

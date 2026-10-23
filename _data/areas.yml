@@ -1,0 +1,96 @@
+- id: seoul
+  name: 서울
+  sub: 서울특별시 전 지역
+  cases: []
+- id: gyeonggi
+  name: 경기
+  sub: 수원·성남·고양·용인·화성·부천·하남·양주 등
+  cases:
+  - name: 화성 A 코인노래방
+    type: 코인노래방
+    img: img_32_76f08a1776.jpg
+  - name: 하남 S 치과의원
+    type: 병원
+    img: img_34_cc8e4586a0.jpg
+  - name: 양주 A 키즈카페
+    type: 키즈카페
+    img: img_36_yangju_kids.jpg
+  - name: 부천 A 탕후루 매장
+    type: 매장
+    img: img_30_a90cc0825a.jpg
+  page: /area/gyeonggi/
+- id: incheon
+  name: 인천
+  sub: 인천광역시 전 지역
+  cases:
+  - name: 인천 A 무인카페
+    type: 무인카페
+    img: img_35_incheon_cafe.jpg
+- id: gangwon
+  name: 강원
+  sub: 춘천·원주·강릉·속초 등
+  cases: []
+- id: chungcheong
+  name: 충청·대전·세종
+  sub: 청주·천안·대전·세종 등
+  cases:
+  - name: 청주 A 무인카페
+    type: 무인카페
+    img: img_19_a77959a9aa.jpg
+- id: jeolla
+  name: 전라·광주
+  sub: 광주·전주·정읍·목포·여수 등
+  cases:
+  - name: 정읍 A 회사 구내식당
+    type: 구내식당
+    img: img_23_0ea373b620.jpg
+  - name: 목포 A PC카페
+    type: PC카페
+    img: img_29_ada5bd47eb.jpg
+  page: /area/jeolla/
+- id: gyeongsang
+  name: 대구·경북·경남
+  sub: 대구·구미·김천·안동·창원·부산·울산 등
+  cases:
+  - name: 대구 A 호텔
+    type: 호텔
+    img: img_24_37d1749c09.jpg
+  - name: 대구 A 병원
+    type: 병원
+    img: img_20_c2a21810f4.jpg
+  - name: 대구 B 학원
+    type: 학원
+    img: img_38_daegu_academy.jpg
+  - name: 대구 A 무인 탁구매장
+    type: 무인매장
+    img: img_27_84535feed1.jpg
+  - name: 구미 A 제조회사 1동
+    type: 공장
+    img: img_25_5659117821.jpg
+  - name: 구미 A 제조회사 2동
+    type: 공장
+    img: img_26_aaecf82ff7.jpg
+  - name: 구미 A 애견카페
+    type: 카페
+    img: img_28_4550fbe456.jpg
+  - name: 김천 A 회사 사무실
+    type: 사무실
+    img: img_21_0c01321191.jpg
+  - name: 안동 A 무인카페
+    type: 무인카페
+    img: img_31_81a31d74fd.jpg
+  - name: 창원 A 여자고등학교
+    type: 학교
+    img: img_22_5c1b8be6bc.jpg
+  page: /area/gyeongsang/
+- id: jeju
+  name: 제주
+  sub: 제주시·서귀포시
+  cases:
+  - name: 제주 P 호텔
+    type: 호텔
+    img: img_33_f4a546b28a.jpg
+  - name: 제주 H 상점
+    type: 매장
+    img: img_37_jeju_shop.jpg
+  page: /area/jeju/

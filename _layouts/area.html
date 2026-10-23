@@ -1,0 +1,38 @@
+---
+layout: base
+---
+{%- comment -%} 118차: 지역별 설치 안내 페이지 공통 틀. 사례 데이터는 _data/areas.yml(region 값으로 찾음), 지역별 글·FAQ는 각 페이지 front matter {%- endcomment -%}
+{% assign r = site.data.areas | where: "id", page.region | first %}
+{% if page.faq and page.faq.size > 0 %}<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+</script>{% endif %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"동네자판기","item":"{{ site.main_url }}/"},{"@type":"ListItem","position":2,"name":"지역별 설치 안내","item":"{{ site.main_url }}/area/"},{"@type":"ListItem","position":3,"name":{{ page.h1 | jsonify }},"item":"{{ site.main_url }}{{ page.url }}"}]}
+</script>
+<section class="pl ar ar-page"><div class="bw">
+<nav class="ar-crumb" aria-label="현재 위치"><a href="{{ '/' | relative_url }}">홈</a> › <a href="{{ '/area/' | relative_url }}">지역별 설치 안내</a> › <span>{{ r.name }}</span></nav>
+<div class="pl-eyebrow">INSTALL AREA · {{ r.name }}</div>
+<h1>{{ page.h1 }}</h1>
+<p class="pl-sub">{{ page.lead }}</p>
+{% if page.summary %}<div class="pa-summary"><strong>핵심 요약</strong><p>{{ page.summary }}</p></div>{% endif %}
+
+<section class="ar-region">
+<div class="ar-head"><h2>{{ r.name }} 실제 설치사례 {{ r.cases.size }}곳</h2><span>{{ r.sub }}</span></div>
+<div class="ar-cases">{% for c in r.cases %}<figure><img src="{{ '/images/' | append: c.img | relative_url }}" alt="{{ c.name }} 자판기 설치 사진" loading="lazy" decoding="async"/><figcaption><em>{{ c.type }}</em>{{ c.name }}</figcaption></figure>{% endfor %}</div>
+</section>
+
+<div class="pa-content ar-body">{{ content }}</div>
+
+{% if page.related %}<section class="ar-related"><h2>함께 보면 좋은 글</h2><ul>{% for l in page.related %}<li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>{% endfor %}</ul></section>{% endif %}
+
+{% if page.faq and page.faq.size > 0 %}<section class="pa-faq ar-faq"><h2>{{ r.name }} 설치 자주 묻는 질문</h2>{% for f in page.faq %}<details{% if forloop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</section>{% endif %}
+
+<div class="pa-cta"><strong>{{ r.name }} 지역 자판기 설치, 공간 사진만 보내주셔도 상담할 수 있습니다</strong><div>
+<a class="pa-btn chat" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">실시간 채팅 상담</a>
+<a class="pa-btn call" href="tel:01079902378">빠른 전화 연결</a>
+<a class="pa-btn quote" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적 신청</a>
+</div></div>
+
+<nav class="ar-near" aria-label="다른 지역"><strong>다른 지역 설치 안내</strong>
+{% for a in site.data.areas %}{% if a.page and a.id != page.region %}<a href="{{ a.page | relative_url }}">{{ a.name }}</a>{% endif %}{% endfor %}<a href="{{ '/area/' | relative_url }}">전체 지역 보기</a></nav>
+</div></section>
