@@ -69,11 +69,14 @@
 ## 정보 글 9번째(119차, 2026-10-23)
 - `/posts/hospital-vending/` '병원 자판기 설치, 대구·하남 사례로 본 대기실 위치와 상품 구성' — 대구 A 병원(사진상 음료+티슈 등 생활용품), 하남 S 치과의원(대기 공간 벽면, 사진 기준). 사용자 미확인 상태로 '설치 사진 기준' 표기. 지역 페이지 경상·경기 '함께 볼 글'에 연결
 
+## 정보 글 10번째(119차, 2026-10-23)
+- `/posts/baseball-vending/` '야구장 자판기 설치, 음료부터 굿즈·포토카드·밀키트까지 상품 구성' — 사용자 의견(업종 다양화, 굿즈·포토카드, 밀키트 증가)을 '현장에서 느끼는 흐름'으로 표기. 야구장 사례 없음 → 정보성. 프로야구 구장 도시(서울 잠실·고척, 인천, 수원, 대전, 광주, 대구, 부산, 창원) 표 + 같은 지역 우리 사례·지역 페이지 연결('야구장이 아니라 같은 지역 다른 업종 사례' 명시). 구단·구장 정식 명칭은 넣지 않음. FAQ 4개
+
 ## 지역별 상세 페이지(118차, 2026-10-23 사용자 승인: 절충안)
 - 사례 있는 4개 지역만 상세 페이지: /area/gyeongsang/(대구·경북·경남, 10곳) /area/gyeonggi/(경기 4곳+인천 언급) /area/jeju/(2곳) /area/jeolla/(전라·광주 2곳). 파일 area/<id>.md, 레이아웃 `_layouts/area.html`(사례 사진·본문·함께 볼 글·지역 FAQ+FAQPage·BreadcrumbList JSON-LD·상담 버튼·다른 지역 링크)
 - 사례 데이터는 `_data/areas.yml` 하나로 관리(허브 /area/와 상세 페이지 공용). 새 사례 → areas.yml + 메인 #case에 추가. 상세 페이지 있는 지역은 `page:` 값 → 허브에 '자세히 →' 링크
 - 원칙: 지역명만 바꾼 복제 페이지 금지(구글 도어웨이 정책). 지역마다 실제 사례·업종별 내용·지역 FAQ가 달라야 함. 2~3개월 서치콘솔 확인 후 사례 생긴 지역부터 확장
-- 키워드 → 주소 매핑: 무인자판기 설치/임대·렌탈 → / | 지역별 자판기 설치 → /area/ | 대구·구미·경북 자판기 설치 → /area/gyeongsang/ | 경기(화성·하남·부천) 자판기 설치 → /area/gyeonggi/ | 제주 자판기 설치 → /area/jeju/ | 광주·전라 자판기 설치 → /area/jeolla/ | 호텔 자판기 → /posts/hotel-vending/ | 자판기 설치 비용 → /posts/cost-factors/ | 자판기 렌탈·임대·구매 → /posts/rent-vs-lease/ | 스마트·키오스크 자판기 → /posts/smart-vs-basic/ | 냉장·냉동 자판기 → /posts/freezer-showcase/ | 자판기 설치 절차 → /posts/install-process/ | 회사·학교·병원 자판기 상품 → /posts/items-by-space/ | 설치 전 확인 → /posts/check-before-install/ | 병원 자판기 → /posts/hospital-vending/ | (예정) 골프장 자판기
+- 키워드 → 주소 매핑: 무인자판기 설치/임대·렌탈 → / | 지역별 자판기 설치 → /area/ | 대구·구미·경북 자판기 설치 → /area/gyeongsang/ | 경기(화성·하남·부천) 자판기 설치 → /area/gyeonggi/ | 제주 자판기 설치 → /area/jeju/ | 광주·전라 자판기 설치 → /area/jeolla/ | 호텔 자판기 → /posts/hotel-vending/ | 자판기 설치 비용 → /posts/cost-factors/ | 자판기 렌탈·임대·구매 → /posts/rent-vs-lease/ | 스마트·키오스크 자판기 → /posts/smart-vs-basic/ | 냉장·냉동 자판기 → /posts/freezer-showcase/ | 자판기 설치 절차 → /posts/install-process/ | 회사·학교·병원 자판기 상품 → /posts/items-by-space/ | 설치 전 확인 → /posts/check-before-install/ | 병원 자판기 → /posts/hospital-vending/ | 야구장 자판기·굿즈 자판기·밀키트 자판기 → /posts/baseball-vending/ | (예정) 골프장 자판기
 
 ## 작성자 표시(117차, 2026-10-23)
 - 정보 글 표지에 '동네자판기 담당자 박시연 · 날짜'(사용자 지정). `_config.yml` author_name/author_role로 관리, Article JSON-LD author=Person(worksFor 동네자판기)
