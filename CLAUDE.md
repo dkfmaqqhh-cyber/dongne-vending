@@ -6,7 +6,8 @@
 - **전용 도메인(120차, 2026-10-28): https://dongnevending.com** — 가비아에서 구입(3년, 만기 2029-10-28, 네임서버 가비아 기본). DNS 관리툴에 A @ 185.199.108~111.153 4개 + CNAME www → dkfmaqqhh-cyber.github.io. 사이트는 GitHub Pages(main)로 운영, `CNAME` 파일, `_config.yml` url/main_url=https://dongnevending.com, baseurl "". 넷리파이(myvending24)는 netlify.toml 301로 새 도메인에 넘기기만(전환 후 넷리파이 배포 1회만 필요). 이후 배포 크레딧 걱정 없음 → main 푸시 = 사이트 반영
 - 2026-10-28 전환 반영: main 192888a(CNAME 포함) → GitHub Pages 빌드 성공, dongnevending.com 접속·canonical 확인. netlify 브랜치=192888a로 301 이동 설정 배포(마지막 넷리파이 배포, 이후 넷리파이 배포 불필요). 원격 domain-switch 브랜치는 권한 문제로 삭제 못 함(무시)
 - 예전 넷리파이 주소 → 새 도메인 이동 사용자 확인 완료(10/28)
-- 전환 후 남은 일: GitHub Settings→Pages→Custom domain 확인·Enforce HTTPS(사용자), 네이버 서치어드바이저·구글 서치콘솔에 새 도메인 등록(인증 태그 새로 받기)·사이트맵 제출, 파워링크 비즈채널 새 주소, 정보 글 자동 발행 예약(사용자 요청: 주차장·운동센터·호텔 굿즈·냉장 고기 자판기 문의 증가 반영)
+- 네이버 서치어드바이저 새 사이트 https://dongnevending.com 등록·소유확인 완료(10/28, 태그 1744e516…, 예전 b84886c7… 태그는 제거), 사이트맵·RSS 제출, 웹 페이지 수집(/, /posts/, /area/) 완료. 예전 넷리파이 사이트 등록과 넷리파이 프로젝트는 301 유지 위해 그대로 둠(2~3개월 뒤 정리)
+- 전환 후 남은 일: GitHub Settings→Pages→Custom domain 확인·Enforce HTTPS(사용자), 구글 서치콘솔 새 도메인 등록·사이트맵 제출·주소 변경 도구, 파워링크 비즈채널 새 주소, 정보 글 자동 발행 예약(사용자 요청: 주차장·운동센터·호텔 굿즈·냉장 고기 자판기 문의 증가 반영)
 - (예전 대표 주소, 지금은 새 도메인으로 301 이동) https://myvending24.netlify.app/  (Netlify 프로젝트명 myvending24, 계정 dkfmaqhqo's team)
 - 정보 글 목록: https://dongnevending.com/posts/ (github.io 주소는 새 도메인으로 자동 이동)
 - 글 관리자(Sveltia CMS): https://dongnevending.com/admin/  (GitHub fine-grained 토큰, dongne-vending 저장소 Contents: Read and write)
