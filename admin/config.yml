@@ -4,7 +4,7 @@ backend:
   repo: dkfmaqqhh-cyber/dongne-vending
   branch: main
 
-site_url: https://dkfmaqqhh-cyber.github.io/dongne-vending
+site_url: https://dongnevending.com
 locale: ko
 
 media_folder: images/uploads
