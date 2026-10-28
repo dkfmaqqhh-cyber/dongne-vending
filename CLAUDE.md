@@ -9,7 +9,8 @@
 - 네이버 서치어드바이저 새 사이트 https://dongnevending.com 등록·소유확인 완료(10/28, 태그 1744e516…, 예전 b84886c7… 태그는 제거), 사이트맵·RSS 제출, 웹 페이지 수집(/, /posts/, /area/) 완료. 예전 넷리파이 사이트 등록과 넷리파이 프로젝트는 301 유지 위해 그대로 둠(2~3개월 뒤 정리)
 - 구글 서치콘솔 새 속성 https://dongnevending.com/ (URL 접두어) 소유권 자동 확인(10/28, HTML 파일 googlef5d28c5141ab1faa.html — 루트 파일 삭제 금지)
 - 구글 새 속성 sitemap.xml 제출 성공(10/28, 발견 18페이지). 주소 변경 도구는 예전 홈 301 확인 실패("페이지를 가져올 수 없음") — 예전 주소는 구글 색인이 거의 없어 건너뛰기로 함(나중에 다시 시도 선택)
-- 전환 후 남은 일: GitHub Settings→Pages→Custom domain 확인·Enforce HTTPS(사용자), 구글 새 속성 색인 요청(/, /area/, hotel·hospital·baseball 글), 파워링크 비즈채널 새 주소, 정보 글 자동 발행 예약(사용자 요청: 주차장·운동센터·호텔 굿즈·냉장 고기 자판기 문의 증가 반영)
+- 구글 새 속성 색인 요청: / 완료(10/28), 할당량 초과로 남은 4개(/area/, /posts/hotel-vending/, /posts/hospital-vending/, /posts/baseball-vending/) 다음 날 진행
+- 전환 후 남은 일: GitHub Settings→Pages→Custom domain 확인·Enforce HTTPS(사용자), 파워링크 비즈채널 새 주소, 정보 글 자동 발행 예약(사용자 요청: 주차장·운동센터·호텔 굿즈·냉장 고기 자판기 문의 증가 반영)
 - (예전 대표 주소, 지금은 새 도메인으로 301 이동) https://myvending24.netlify.app/  (Netlify 프로젝트명 myvending24, 계정 dkfmaqhqo's team)
 - 정보 글 목록: https://dongnevending.com/posts/ (github.io 주소는 새 도메인으로 자동 이동)
 - 글 관리자(Sveltia CMS): https://dongnevending.com/admin/  (GitHub fine-grained 토큰, dongne-vending 저장소 Contents: Read and write)
