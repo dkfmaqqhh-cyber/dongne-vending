@@ -5,16 +5,16 @@
 ## 한눈에 보기
 - **전용 도메인(120차, 2026-10-28): https://dongnevending.com** — 가비아에서 구입(3년, 만기 2029-10-28, 네임서버 가비아 기본). DNS 관리툴에 A @ 185.199.108~111.153 4개 + CNAME www → dkfmaqqhh-cyber.github.io. 사이트는 GitHub Pages(main)로 운영, `CNAME` 파일, `_config.yml` url/main_url=https://dongnevending.com, baseurl "". 넷리파이(myvending24)는 netlify.toml 301로 새 도메인에 넘기기만(전환 후 넷리파이 배포 1회만 필요). 이후 배포 크레딧 걱정 없음 → main 푸시 = 사이트 반영
 - 2026-10-28 전환 반영: main 192888a(CNAME 포함) → GitHub Pages 빌드 성공, dongnevending.com 접속·canonical 확인. netlify 브랜치=192888a로 301 이동 설정 배포(마지막 넷리파이 배포, 이후 넷리파이 배포 불필요). 원격 domain-switch 브랜치는 권한 문제로 삭제 못 함(무시)
-- 전환 후 남은 일: GitHub Settings→Pages→Custom domain 확인·Enforce HTTPS(사용자), 예전 넷리파이 주소 이동 확인(사용자), 네이버 서치어드바이저·구글 서치콘솔에 새 도메인 등록(인증 태그 새로 받기)·사이트맵 제출, 파워링크 비즈채널 새 주소, 정보 글 자동 발행 예약(사용자 요청: 주차장·운동센터·호텔 굿즈·냉장 고기 자판기 문의 증가 반영)
-- 사이트(대표 주소): https://myvending24.netlify.app/  (Netlify 프로젝트명 myvending24, 계정 dkfmaqhqo's team)
-- 사이트(GitHub Pages 사본): https://dkfmaqqhh-cyber.github.io/dongne-vending/
-- 정보 글 목록: https://dkfmaqqhh-cyber.github.io/dongne-vending/posts/
-- 글 관리자(Sveltia CMS): https://dkfmaqqhh-cyber.github.io/dongne-vending/admin/  (GitHub fine-grained 토큰, dongne-vending 저장소 Contents: Read and write)
+- 예전 넷리파이 주소 → 새 도메인 이동 사용자 확인 완료(10/28)
+- 전환 후 남은 일: GitHub Settings→Pages→Custom domain 확인·Enforce HTTPS(사용자), 네이버 서치어드바이저·구글 서치콘솔에 새 도메인 등록(인증 태그 새로 받기)·사이트맵 제출, 파워링크 비즈채널 새 주소, 정보 글 자동 발행 예약(사용자 요청: 주차장·운동센터·호텔 굿즈·냉장 고기 자판기 문의 증가 반영)
+- (예전 대표 주소, 지금은 새 도메인으로 301 이동) https://myvending24.netlify.app/  (Netlify 프로젝트명 myvending24, 계정 dkfmaqhqo's team)
+- 정보 글 목록: https://dongnevending.com/posts/ (github.io 주소는 새 도메인으로 자동 이동)
+- 글 관리자(Sveltia CMS): https://dongnevending.com/admin/  (GitHub fine-grained 토큰, dongne-vending 저장소 Contents: Read and write)
 - 배포: GitHub Pages (main 브랜치 / root, Jekyll 자동 빌드). 푸시 후 1~3분 뒤 반영
 - 빌드 확인: `curl -s "https://api.github.com/repos/dkfmaqqhh-cyber/dongne-vending/actions/runs?per_page=1"`
 - Netlify 동시 배포(준비 완료, 2026-09-30): `netlify.toml`(빌드 `bundle exec jekyll build --config _config.yml,_config_netlify.yml`, publish `_site`), `Gemfile`(github-pages 젬), `_config_netlify.yml`(baseurl "", url은 Netlify 주소 정해지면 입력). Netlify는 사용자 새 계정(GitHub dkfmaqhqo-crypto, 무료 월 300크레딧·배포 1회 15크레딧 ≈ 월 20회)으로 연결 진행 중 — dkfmaqhqo-crypto를 저장소 협업자로 초대·수락 완료, 다음은 dkfmaqqhh-cyber 계정으로 Netlify GitHub 앱 설치 후 Import. netlify.toml `ignore`로 CLAUDE.md·README만 바뀐 커밋은 배포 건너뜀. 커밋은 가급적 묶어서 올려 배포 횟수 절약 — 첫 빌드 로그 확인 필요(로컬에서 Jekyll 빌드는 rubygems 차단으로 검증 못 함)
 - **Netlify 배포 제한(2026-09-30)**: Netlify는 `netlify` 브랜치만 배포(Production branch=netlify, Branch deploys=production only 설정 완료 확인 2026-09-30). 평소 작업·CMS 글은 main → GitHub Pages만 반영. 사용자가 "넷리파이에도 반영" 요청할 때만 `git push origin main:netlify`로 동기화(배포 1회 = 15크레딧). Netlify 계정: dkfmaqhqo's team(동네자판기 전용). 오늘의 철거(spacereborn-site)는 다른 Netlify 계정 — 섞어서 Import 금지
-- 대표 주소: `_config.yml`의 `main_url` 하나로 canonical·og:url·og:image·JSON-LD·RSS·robots 전부 관리. 현재 **https://myvending24.netlify.app** (2026-09-30 사용자 결정, 네이버 등록용). GitHub Pages 사본도 canonical은 Netlify 주소를 가리킴. 전용 도메인 연결 시 main_url만 수정
+- 대표 주소: `_config.yml`의 `main_url` 하나로 canonical·og:url·og:image·JSON-LD·RSS·robots 전부 관리. 현재 **https://dongnevending.com** (2026-10-28 전환, 이전 myvending24.netlify.app)
 - 같은 계정의 다른 저장소 `spacereborn-site` = '오늘의 철거'(onulcheolgeo.kr) 사이트. 섞지 말 것.
 
 ## 연락·상담 링크 (전부 반영됨)
@@ -32,7 +32,7 @@
 - `rss.xml` : RSS 2.0 피드(최근 30개, 네이버 서치어드바이저 RSS 제출용). base.html·index.html head에 rss 링크
 - 로컬 미리보기는 Liquid 처리가 필요 → python-liquid로 index.html 렌더 후 확인(작업 방법 메모 참고)
 - `admin/index.html`, `admin/config.yml` : Sveltia CMS (날짜는 date-only로 저장하도록 설정)
-- `_config.yml` : baseurl `/dongne-vending`, timezone Asia/Seoul, `future: true`, jekyll-sitemap. 전용 도메인 연결 시 baseurl "" + CNAME 추가
+- `_config.yml` : baseurl ""(120차 도메인 전환 후), timezone Asia/Seoul, `future: true`, jekyll-sitemap. 전용 도메인 연결 시 baseurl "" + CNAME 추가
 - `robots.txt` : /admin/ 제외, sitemap 링크
 
 ## 메인 페이지 섹션 순서 (id)
@@ -139,7 +139,7 @@
 - 2026-10-23: 네이버 웹 페이지 수집 요청 6개 완료(/area/, /area/gyeongsang/, /area/gyeonggi/, /area/jeju/, /area/jeolla/, /posts/hotel-vending/). 구글 색인 요청은 할당량 초과로 못 함 → 다음 날 다시 시도(사이트맵 제출돼 있으면 자동 수집도 됨). 같은 날 네이버 수집 요청 2개 추가 완료(/posts/hospital-vending/, /posts/baseball-vending/). 구글 남은 요청 8개: /area/, hotel·hospital·baseball 글, 지역 4개
 
 ## 작업 방법 메모
-- index.html에 Liquid가 있으므로 로컬 화면 확인 시 `pip install --break-system-packages python-liquid` 후 site.posts를 _posts front matter로 만들어 렌더(relative_url 필터는 '/dongne-vending' 붙이기)
+- index.html에 Liquid가 있으므로 로컬 화면 확인 시 `pip install --break-system-packages python-liquid` 후 site.posts를 _posts front matter로 만들어 렌더(relative_url 필터: 도메인 전환 후 baseurl ""이므로 앞에 아무것도 안 붙임 — scratchpad render.py는 아직 '/dongne-vending' 기준, 미리보기만 영향)
 - 화면 확인: 저장소 폴더에서 `python3 -m http.server 8765` 후 Playwright(PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers)로 스크린샷. 모바일은 390×844 뷰포트 한 화면으로 찍을 것(구역 전체 캡처는 고정 헤더·하단 바가 중간에 찍혀 오해 생김). `html{scroll-behavior:auto}` 넣고 스크롤
 - 작업 공간에서는 구글 폰트가 막혀 스크린샷 글씨체가 실제와 다를 수 있음
 - 푸시 후 빌드 확인은 위 curl 명령으로 head_sha 일치 + success 확인
