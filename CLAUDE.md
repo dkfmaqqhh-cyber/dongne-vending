@@ -80,7 +80,7 @@
 - 예약 작업: "동네자판기 정보글 자동 발행 (수·목·금)" trig_01UCi3CwxJvu2d18418vBeBm, 매주 수·목·금 06:55(KST), 클라우드 실행·자동 승인·완료 시 휴대폰 알림. 첫 실행 2026-10-29(목)
 - 예약 작업이 이 섹션을 읽고 '주제 대기열'에서 아직 안 쓴 첫 주제로 글 1편을 써서 main에 올림(GitHub Pages → https://dongnevending.com 자동 반영, 비용 없음)
 - 주제 대기열(위에서부터, 다 쓰면 [완료 날짜 slug] 표시). '문의 증가'는 사용자가 말한 사실(10/28: 주차장·운동센터·호텔 굿즈·냉장 고기 자판기 문의가 늘고 있음) — 글에는 "최근 상담 문의가 늘고 있는 분야"로만 쓰고 설치사례처럼 쓰지 말 것
-  1. 주차장 자판기(문의 증가) — 무인 주차장·주차타워·공영주차장 이용객 음료·간식·차량용품, 전원·야외 설치 확인
+  1. 주차장 자판기(문의 증가) — 무인 주차장·주차타워·공영주차장 이용객 음료·간식·차량용품, 전원·야외 설치 확인 [완료 2026-10-29 parking-vending]
   2. 운동센터·피트니스 자판기(문의 증가) — 운동 전후 음료·단백질 음료, 대구 무인 탁구매장 사례 연결, 기존 items-by-space와 겹치지 않게 깊게
   3. 호텔 굿즈 자판기(문의 증가) — 호텔 로고 굿즈·어메니티·기념품, 굿즈 밴딩머신, 제주 P호텔 수영장 앞(수영모) 사례, hotel-vending 글과 겹치지 않게 '굿즈' 중심
   4. 냉장 고기(정육) 자판기(문의 증가) — 냉장·냉동 쇼케이스, 보관 온도, 식육 판매 관련 영업 신고 등은 공공자료로 확인된 것만(확인 못 하면 "관할 시·군·구청 확인 필요"로만)
@@ -118,7 +118,7 @@
 - 사례 있는 4개 지역만 상세 페이지: /area/gyeongsang/(대구·경북·경남, 10곳) /area/gyeonggi/(경기 4곳+인천 언급) /area/jeju/(2곳) /area/jeolla/(전라·광주 2곳). 파일 area/<id>.md, 레이아웃 `_layouts/area.html`(사례 사진·본문·함께 볼 글·지역 FAQ+FAQPage·BreadcrumbList JSON-LD·상담 버튼·다른 지역 링크)
 - 사례 데이터는 `_data/areas.yml` 하나로 관리(허브 /area/와 상세 페이지 공용). 새 사례 → areas.yml + 메인 #case에 추가. 상세 페이지 있는 지역은 `page:` 값 → 허브에 '자세히 →' 링크
 - 원칙: 지역명만 바꾼 복제 페이지 금지(구글 도어웨이 정책). 지역마다 실제 사례·업종별 내용·지역 FAQ가 달라야 함. 2~3개월 서치콘솔 확인 후 사례 생긴 지역부터 확장
-- 키워드 → 주소 매핑: 무인자판기 설치/임대·렌탈 → / | 지역별 자판기 설치 → /area/ | 대구·구미·경북 자판기 설치 → /area/gyeongsang/ | 경기(화성·하남·부천) 자판기 설치 → /area/gyeonggi/ | 제주 자판기 설치 → /area/jeju/ | 광주·전라 자판기 설치 → /area/jeolla/ | 호텔 자판기 → /posts/hotel-vending/ | 자판기 설치 비용 → /posts/cost-factors/ | 자판기 렌탈·임대·구매 → /posts/rent-vs-lease/ | 스마트·키오스크 자판기 → /posts/smart-vs-basic/ | 냉장·냉동 자판기 → /posts/freezer-showcase/ | 자판기 설치 절차 → /posts/install-process/ | 회사·학교·병원 자판기 상품 → /posts/items-by-space/ | 설치 전 확인 → /posts/check-before-install/ | 병원 자판기 → /posts/hospital-vending/ | 야구장 자판기·굿즈 자판기·밀키트 자판기 → /posts/baseball-vending/ | (예정) 골프장 자판기
+- 키워드 → 주소 매핑: 무인자판기 설치/임대·렌탈 → / | 지역별 자판기 설치 → /area/ | 대구·구미·경북 자판기 설치 → /area/gyeongsang/ | 경기(화성·하남·부천) 자판기 설치 → /area/gyeonggi/ | 제주 자판기 설치 → /area/jeju/ | 광주·전라 자판기 설치 → /area/jeolla/ | 호텔 자판기 → /posts/hotel-vending/ | 자판기 설치 비용 → /posts/cost-factors/ | 자판기 렌탈·임대·구매 → /posts/rent-vs-lease/ | 스마트·키오스크 자판기 → /posts/smart-vs-basic/ | 냉장·냉동 자판기 → /posts/freezer-showcase/ | 자판기 설치 절차 → /posts/install-process/ | 회사·학교·병원 자판기 상품 → /posts/items-by-space/ | 설치 전 확인 → /posts/check-before-install/ | 병원 자판기 → /posts/hospital-vending/ | 야구장 자판기·굿즈 자판기·밀키트 자판기 → /posts/baseball-vending/ | 주차장 자판기 설치 → /posts/parking-vending/ | (예정) 골프장 자판기
 
 ## GEO 교육자료 점검(123차, 2026-10-28)
 - 자료: 바인그룹 'GEO 1회차' (Google 공식: AI 전용 마크업 불필요, FAQ 리치결과 종료, llms.txt 무관 / 검색봇은 열고 학습봇은 정책대로 / 지역명 바꾼 페이지 대량 생산 금지 / 측정: 서치콘솔+애널리틱스+프롬프트 감사)
