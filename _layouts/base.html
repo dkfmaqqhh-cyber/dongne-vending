@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="{{ '/assets/post.css' | relative_url }}"/>
 {% if page.layout == 'post' %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}","image":"{% if page.thumbnail and page.thumbnail != "" %}{{ site.main_url }}{{ page.thumbnail }}{% else %}{{ site.main_url }}/images/img_02_649dbf922e.png{% endif %}","inLanguage":"ko-KR","author":{"@type":"Person","name":"{{ site.author_name }}","jobTitle":"{{ site.author_role }}","worksFor":{"@type":"Organization","name":"동네자판기","url":"{{ site.main_url }}/"}},"publisher":{"@type":"Organization","name":"동네자판기","logo":{"@type":"ImageObject","url":"{{ site.main_url }}/images/img_02_649dbf922e.png"}},"mainEntityOfPage":"{{ site.main_url }}{{ page.url }}"}
+{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}","image":"{% if page.thumbnail and page.thumbnail != "" %}{{ site.main_url }}{{ page.thumbnail }}{% else %}{{ site.main_url }}/images/img_02_649dbf922e.png{% endif %}","inLanguage":"ko-KR","author":{"@type":"Organization","name":"{{ site.author_name }}","url":"{{ site.main_url }}/"},"publisher":{"@type":"Organization","name":"동네자판기","logo":{"@type":"ImageObject","url":"{{ site.main_url }}/images/img_02_649dbf922e.png"}},"mainEntityOfPage":"{{ site.main_url }}{{ page.url }}"}
 </script>
 {% if page.faq and page.faq.size > 0 %}<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
@@ -34,7 +34,7 @@
 <nav class="bh-menu"><a href="{{ '/#types' | relative_url }}">자판기종류</a><a href="{{ '/#place' | relative_url }}">설치장소·사례</a><a href="{{ '/posts/' | relative_url }}">정보</a></nav>
 </div></header>
 <main>{{ content }}</main>
-<footer class="bf"><div class="bw">동네자판기 · 무인자판기 임대·설치·렌탈 상담 · 전화 <a href="tel:01079902378">010-7990-2378</a> · <a href="{{ '/area/' | relative_url }}">지역별 설치 안내</a> · <a href="{{ '/privacy/' | relative_url }}">개인정보 처리방침</a></div></footer>
+<footer class="bf"><div class="bw">운영: 동네자판기 (LK 자판기 공식 판매·설치점) · 무인자판기 임대·설치·렌탈 상담 · 전화 <a href="tel:01079902378">010-7990-2378</a> · <a href="{{ '/area/' | relative_url }}">지역별 설치 안내</a> · <a href="{{ '/privacy/' | relative_url }}">개인정보 처리방침</a></div></footer>
 {% include float-cta.html min=641 %}
 <div class="bmob"><a href="tel:01079902378">전화 바로 연결</a><a class="k" href="https://open.kakao.com/o/sdyUEOPi" target="_blank" rel="noopener">카톡 상담</a><a class="q" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적 신청</a></div>
 </body>

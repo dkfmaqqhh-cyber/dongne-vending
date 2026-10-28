@@ -26,5 +26,4 @@ defaults:
   - scope: { path: "admin" }
     values: { sitemap: false }
 # 117차: 정보 글 작성자 표시(사용자 지정 2026-10-23)
-author_name: "박시연"
-author_role: "동네자판기 담당자"
+author_name: "동네자판기"   # 122차(2026-10-28): 박시연은 실명 아님 → 사용자 요청으로 변경

@@ -8,7 +8,7 @@ layout: base
 <a class="pa-back" href="{{ '/posts/' | relative_url }}">← 정보 글 목록</a>
 <span class="pa-tag">{{ page.tag }}</span>
 <h1>{{ page.title }}</h1>
-<em>{{ site.author_role }} {{ site.author_name }} · {{ page.date | date: "%Y.%m.%d" }}{% if page.last_modified_at %} · 수정 {{ page.last_modified_at | date: "%Y.%m.%d" }}{% endif %}</em>
+<em>{{ site.author_name }} · {{ page.date | date: "%Y.%m.%d" }}{% if page.last_modified_at %} · 수정 {{ page.last_modified_at | date: "%Y.%m.%d" }}{% endif %}</em>
 </div></div>
 <div class="bw pa-body">
 {% if page.description %}<p class="pa-lead">{{ page.description }}</p>{% endif %}
