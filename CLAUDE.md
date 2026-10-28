@@ -11,7 +11,8 @@
 - 구글 새 속성 sitemap.xml 제출 성공(10/28, 발견 18페이지). 주소 변경 도구는 예전 홈 301 확인 실패("페이지를 가져올 수 없음") — 예전 주소는 구글 색인이 거의 없어 건너뛰기로 함(나중에 다시 시도 선택)
 - 구글 새 속성 색인 요청: / 완료(10/28), 할당량 초과로 남은 4개(/area/, /posts/hotel-vending/, /posts/hospital-vending/, /posts/baseball-vending/) 다음 날 진행
 - GitHub Pages 설정 확인(10/28): 사용자 지정 도메인 dongnevending.com, DNS 확인 성공, HTTPS 강제 적용 체크됨
-- 전환 후 남은 일: 파워링크 비즈채널 새 주소, 정보 글 자동 발행은 121차 섹션 참고
+- 파워링크: 예전 동네자판기 비즈채널(넷리파이 주소)이 소유확인 문제로 제재 → 사용자가 삭제 요청으로 삭제(10/28). 새 도메인으로 비즈채널 새로 등록 예정
+- 전환 후 남은 일: 파워링크 비즈채널 dongnevending.com 신규 등록(소유확인 요구 시 태그·파일은 Claude가 사이트에 추가), 정보 글 자동 발행은 121차 섹션 참고
 - (예전 대표 주소, 지금은 새 도메인으로 301 이동) https://myvending24.netlify.app/  (Netlify 프로젝트명 myvending24, 계정 dkfmaqhqo's team)
 - 정보 글 목록: https://dongnevending.com/posts/ (github.io 주소는 새 도메인으로 자동 이동)
 - 글 관리자(Sveltia CMS): https://dongnevending.com/admin/  (GitHub fine-grained 토큰, dongne-vending 저장소 Contents: Read and write)
