@@ -10,6 +10,7 @@
 - 구글 서치콘솔 새 속성 https://dongnevending.com/ (URL 접두어) 소유권 자동 확인(10/28, HTML 파일 googlef5d28c5141ab1faa.html — 루트 파일 삭제 금지)
 - 구글 새 속성 sitemap.xml 제출 성공(10/28, 발견 18페이지). 주소 변경 도구는 예전 홈 301 확인 실패("페이지를 가져올 수 없음") — 예전 주소는 구글 색인이 거의 없어 건너뛰기로 함(나중에 다시 시도 선택)
 - 구글 새 속성 색인 요청: / 완료(10/28), 할당량 초과로 남은 4개(/area/, /posts/hotel-vending/, /posts/hospital-vending/, /posts/baseball-vending/) 다음 날 진행
+- 10/29 사용자 확인: 위 4개는 URL 검사에서 'Google에 등록되어 있음' → 요청 안 함. /posts/parking-vending/은 미등록이라 색인 요청 완료. 네이버 웹 페이지 수집에도 parking-vending 주소 안내함
 - GitHub Pages 설정 확인(10/28): 사용자 지정 도메인 dongnevending.com, DNS 확인 성공, HTTPS 강제 적용 체크됨
 - 파워링크: 예전 동네자판기 비즈채널(넷리파이 주소)이 '사이트 운영자가 광고주 실명과 같은지 확인 불가'로 제재 → 사용자가 삭제 요청으로 삭제(10/28). 새 도메인으로 비즈채널 새로 등록 예정
 - 파워링크 새 비즈채널 등록(10/28): 비즈채널 이름 "밴딩머신", 사이트 이름 "동네자판기", URL https://dongnevending.com — PC·모바일 검토중. 반려 시 사유 받아 대응(소유확인 태그·파일은 Claude가 추가)
