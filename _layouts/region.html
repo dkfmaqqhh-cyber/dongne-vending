@@ -1,0 +1,31 @@
+---
+layout: base
+---
+{%- comment -%} 127차: 시·도별 지역 페이지 틀. 지역별 내용은 각 페이지 front matter, 목록은 _data/regions.yml {%- endcomment -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"동네자판기","item":"{{ site.main_url }}/"},{"@type":"ListItem","position":2,"name":"지역별 설치 안내","item":"{{ site.main_url }}/area/"},{"@type":"ListItem","position":3,"name":{{ page.h1 | jsonify }},"item":"{{ site.main_url }}{{ page.url }}"}]}
+</script>
+<section class="rg-hero"><div class="bw rg-hero-in"><div>
+<nav class="rg-crumb" aria-label="현재 위치"><a href="{{ '/' | relative_url }}">홈</a> › <a href="{{ '/area/' | relative_url }}">지역별 설치 안내</a> › <span>{{ page.region_name }}</span></nav>
+<div class="rg-ey">Region</div>
+<h1>{{ page.h1 }}</h1>
+<p>{{ page.lead }}</p>
+<a class="rg-btn" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">상담 신청하기</a></div>
+<div class="rg-ph{% if page.hero_wide %} wide{% endif %}"><img src="{{ '/images/' | append: page.hero | relative_url }}" alt="{{ page.hero_alt }}" fetchpriority="high"/></div></div></section>
+<div class="bw"><section class="rg-b"><div class="rg-ey">Area</div><h2>{{ page.region_name }}에서 자판기를 두는 곳</h2>
+<p>{{ page.area_intro }}</p>
+<ul class="rg-li">{% for i in page.area_items %}<li><b>{{ i.k }}:</b> {{ i.v }}</li>{% endfor %}</ul>
+{% if page.note %}<div class="rg-note">{{ page.note }}</div>{% endif %}
+<div class="rg-sm">{{ page.region_name }}에서 살펴볼 공간</div><div class="rg-ch">{% for s in page.spaces %}<span>{{ s }}</span>{% endfor %}</div></section></div>
+<section class="rg-band"><div class="bw"><div class="rg-ey">Detail</div><h2>{{ page.region_name }} 설치, 이렇게 안내합니다</h2>{% for d in page.detail %}<p>{{ d }}</p>{% endfor %}</div></section>
+<section class="rg-band w"><div class="bw"><div class="rg-ey">Place</div><h2>장소별 자판기 안내</h2><div class="rg-ch l">
+<a href="{{ '/posts/parking-vending/' | relative_url }}">주차장</a><a href="{{ '/posts/fitness-vending/' | relative_url }}">운동센터</a><a href="{{ '/posts/hotel-vending/' | relative_url }}">호텔</a><a href="{{ '/posts/hotel-goods-vending/' | relative_url }}">호텔 굿즈</a><a href="{{ '/posts/hospital-vending/' | relative_url }}">병원</a><a href="{{ '/posts/golf-vending/' | relative_url }}">골프장</a><a href="{{ '/posts/baseball-vending/' | relative_url }}">야구장</a><a href="{{ '/posts/meat-vending/' | relative_url }}">정육·냉장 고기</a><a href="{{ '/posts/items-by-space/' | relative_url }}">회사·학교</a></div></div></section>
+<section class="rg-band"><div class="bw"><div class="rg-ey">Sigungu</div><h2>{{ page.region_name }} 시·군·구</h2><p>아래 지역 모두 상담과 설치가 가능합니다.</p><div class="rg-ch">{% for s in page.sigungu %}<span>{{ s }}</span>{% endfor %}</div></div></section>
+<section class="rg-band w"><div class="bw"><div class="rg-ey">Process</div><h2>상담 신청부터 운영 시작까지</h2><div class="rg-st">
+<div><b>기본 정보 전달</b>설치 지역과 장소, 공간 사진을 알려주세요.</div><div><b>설치 환경 확인</b>공간 크기, 전원, 반입 경로를 확인합니다.</div><div><b>상담·제품 제안</b>공간에 맞는 기종과 상품 구성을 제안합니다.</div><div><b>방문·설치 진행</b>일정을 정해 현장에 설치합니다.</div><div><b>운영 시작</b>설치일부터 3년 무상 A/S를 받을 수 있습니다.</div></div></div></section>
+<div class="bw"><section class="pa-faq ar-faq"><h2>{{ page.region_name }} 자판기 설치 자주 묻는 질문</h2>{% for f in page.faq %}<details{% if forloop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</section>
+<nav class="ar-near" aria-label="다른 지역"><strong>다른 지역</strong>{% for a in site.data.regions %}{% if a.page and a.id != page.region %}<a href="{{ a.page | relative_url }}">{{ a.name }}</a>{% endif %}{% endfor %}<a href="{{ '/area/' | relative_url }}">전체 지역 보기</a></nav></div>
+<section class="rg-end"><div class="bw"><h2>{{ page.region_name }}, 설치 자리부터 함께 확인합니다</h2><p>공간 사진만 보내주셔도 상담할 수 있습니다.</p><a class="rg-btn" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">상담 신청하기</a></div></section>
