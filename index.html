@@ -2248,6 +2248,30 @@ html{scroll-behavior:smooth}
 .hp-two .hp-card em{font-size:14px}
 @media (max-width:980px){.hp-two .hp-card{aspect-ratio:3/4}}
 @media (max-width:640px){.hp-two .hp-card{padding:14px 13px 13px}.hp-two .hp-card strong{font-size:18px}.hp-two .hp-card em{font-size:12px}}
+
+/* 126차 시안3: 냉장(하늘)·냉동(남색) 색 구분 + 온도 + 특징 2줄 */
+.hp-two .hp-card{justify-content:flex-end !important;padding:22px !important}
+.hp-two .hp-card::before{background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(20,14,10,.35) 55%,rgba(20,14,10,.88) 100%) !important}
+.hp-two .hp-card::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;z-index:1}
+.hp-two .is-cold::after{background:linear-gradient(90deg,#7cc7ff,#bfe6ff)}
+.hp-two .is-frozen::after{background:linear-gradient(90deg,#2b4f9e,#5f87d9)}
+.hp-temp{position:absolute;top:18px;left:18px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:-.2px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.is-cold .hp-temp{background:#e6f5ff;color:#0f5a8f}
+.is-frozen .hp-temp{background:#1f3a78;color:#e8efff}
+.hp-two .hp-card strong{font-size:30px !important;margin:0 0 10px !important}
+.hp-feat{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:5px}
+.hp-feat li{position:relative;padding-left:14px;font-size:14.5px;color:#f3e9dc;line-height:1.4}
+.hp-feat li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%}
+.is-cold .hp-feat li::before{background:#8fd0ff}
+.is-frozen .hp-feat li::before{background:#8fb0ff}
+.hp-two .hp-more{margin-top:0 !important}
+@media (hover:hover){.hp-two .hp-card{background-size:auto 108% !important;transition:background-size .5s ease,transform .25s}.hp-two .hp-card:hover{background-size:auto 116% !important}}
+@media (max-width:640px){
+  .hp-two .hp-card{padding:12px !important;aspect-ratio:3/4 !important;min-height:220px}
+  .hp-temp{top:10px;left:10px;font-size:10.5px;padding:4px 8px}
+  .hp-two .hp-card strong{font-size:18px !important;margin-bottom:6px !important}
+  .hp-feat{margin-bottom:10px;gap:3px}.hp-feat li{font-size:11.5px;padding-left:10px}.hp-feat li::before{width:4px;height:4px}
+}
 </style>
 </head>
 <body>
@@ -2264,7 +2288,7 @@ html{scroll-behavior:smooth}
 <div class="wrap">
 <div class="h2-shell">
 <div class="h2-top">
-<div class="h2-photo hp-grid hp-two" aria-label="자판기 종류"><a class="hp-card" href="#machines" data-pick="0" style="--bg:url(images/img_05_c55c056ea6.jpg);--pos:50% 50%"><strong>냉장 자판기</strong><em>음료·간식·도시락</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="2" style="--bg:url(images/img_07_4082171e59.jpg);--pos:45% 40%"><strong>냉동 자판기</strong><em>냉동식품·정육·밀키트</em><span class="hp-more">자세히 보기 →</span></a></div>
+<div class="h2-photo hp-grid hp-two" aria-label="냉장·냉동 자판기"><a class="hp-card is-cold" href="#machines" data-pick="0" style="--bg:url(images/img_05_c55c056ea6.jpg);--pos:50% 50%"><span class="hp-temp">❄ 0~10℃ 냉장 기준</span><strong>냉장 자판기</strong><ul class="hp-feat"><li>음료·간식</li><li>도시락·샐러드</li></ul><span class="hp-more">자세히 보기 →</span></a><a class="hp-card is-frozen" href="#machines" data-pick="2" style="--bg:url(images/img_07_4082171e59.jpg);--pos:45% 40%"><span class="hp-temp">❄ -5 ~ -22℃ 운영</span><strong>냉동 자판기</strong><ul class="hp-feat"><li>냉동식품·밀키트</li><li>블록형 진열</li></ul><span class="hp-more">자세히 보기 →</span></a></div>
 <div class="h2-panel">
 <div class="h2-status-row">
 <span class="h2-status"><i></i><span class="h2-ticker" aria-label="전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능"><span class="h2-ticker-track" aria-hidden="true"><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span></span></span></span>
