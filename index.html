@@ -2224,6 +2224,21 @@ html{scroll-behavior:smooth}
 @media (max-width:360px){.h2-stats li{padding:2px 8px}.h2-stats b{font-size:25px}.h2-stats b small{font-size:12.5px}.h2-stats span{font-size:11.5px}}
 /* 116차: 320px 화면에서 하단 고정바 글자 한 줄 유지 */
 @media (max-width:340px){.mobilebar a{font-size:13px !important;padding:15px 3px !important;white-space:nowrap;letter-spacing:-.3px}}
+
+/* 126차: 첫 화면 왼쪽 사진 → 자판기 종류 카드 4개 */
+.vm-structure-head .sub{word-break:keep-all}
+.hp-grid{display:grid !important;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;background:transparent !important;border:0 !important;box-shadow:none !important;min-height:520px}
+.hp-card{position:relative;display:flex;flex-direction:column;justify-content:flex-start;padding:18px 18px 16px;border-radius:20px;overflow:hidden;text-decoration:none;color:#fff;background:#2a1e17 var(--bg) var(--pos)/cover no-repeat;isolation:isolate;transition:transform .25s}
+.hp-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(42,30,23,.82) 0%,rgba(42,30,23,.35) 42%,rgba(42,30,23,.05) 62%,rgba(42,30,23,.55) 100%)}
+.hp-card:hover{transform:translateY(-3px)}
+.hp-num{font-size:13px;font-weight:800;color:#ffb07a;letter-spacing:.06em}
+.hp-card strong{margin-top:4px;font-size:21px;font-weight:800;line-height:1.3;letter-spacing:-.5px;word-break:keep-all;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.hp-card em{font-style:normal;font-size:13px;color:#f1e4d4;margin-top:3px}
+.hp-more{margin-top:auto;align-self:flex-start;padding:7px 13px;border-radius:999px;background:#fff;color:#2f241d;font-size:12.5px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.hp-card:hover .hp-more{background:var(--orange,#ff5b14);color:#fff}
+@media (min-width:981px) and (max-width:1240px){.hp-grid{min-height:480px}.hp-card strong{font-size:18px}}
+@media (max-width:980px){.hp-grid{min-height:0 !important;aspect-ratio:auto !important;grid-template-rows:auto;order:2}.h2-panel{order:1}.hp-card{aspect-ratio:1/.82}}
+@media (max-width:640px){.hp-grid{gap:8px}.hp-card{padding:12px 12px 11px;border-radius:16px}.hp-card strong{font-size:15.5px}.hp-card em{font-size:11.5px}.hp-num{font-size:11.5px}.hp-more{font-size:11px;padding:5px 10px}}
 </style>
 </head>
 <body>
@@ -2240,9 +2255,7 @@ html{scroll-behavior:smooth}
 <div class="wrap">
 <div class="h2-shell">
 <div class="h2-top">
-<div class="h2-photo">
-<img alt="동네자판기 실제 설치 이미지" src="images/img_03_hero_notext.jpg"/>
-</div>
+<div class="h2-photo hp-grid" aria-label="자판기 종류"><a class="hp-card" href="#machines" data-pick="0" style="--bg:url(images/img_04_5aedaa01d6.jpg);--pos:50% 50%"><span class="hp-num">01</span><strong>스마트 밴딩머신</strong><em>음료·간식 기본형</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="1" style="--bg:url(images/img_05_c55c056ea6.jpg);--pos:50% 50%"><span class="hp-num">02</span><strong>확장형 밴딩머신</strong><em>멀티자판기 구성</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="2" style="--bg:url(images/img_07_4082171e59.jpg);--pos:45% 40%"><span class="hp-num">03</span><strong>냉장·냉동 쇼케이스</strong><em>도시락·정육·밀키트</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="3" style="--bg:url(images/img_08_41f37782a3.jpg);--pos:50% 50%"><span class="hp-num">04</span><strong>굿즈 밴딩머신</strong><em>굿즈·특화 상품</em><span class="hp-more">자세히 보기 →</span></a></div>
 <div class="h2-panel">
 <div class="h2-status-row">
 <span class="h2-status"><i></i><span class="h2-ticker" aria-label="전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능"><span class="h2-ticker-track" aria-hidden="true"><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span></span></span></span>
@@ -2754,6 +2767,14 @@ wcs_add["wa"] = "bce312675be978";
 if(window.wcs) {
 wcs_do();
 }
+</script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.hp-card').forEach(function(a){a.addEventListener('click',function(e){
+    var o=document.querySelectorAll('.vm-machine-option')[+a.dataset.pick];if(!o)return;e.preventDefault();o.click();
+    var t=document.getElementById('machines');if(t)t.scrollIntoView({behavior:'smooth'});
+  });});
+});
 </script>
 </body>
 </html>
