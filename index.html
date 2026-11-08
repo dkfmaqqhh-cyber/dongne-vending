@@ -2239,6 +2239,15 @@ html{scroll-behavior:smooth}
 @media (min-width:981px) and (max-width:1240px){.hp-grid{min-height:480px}.hp-card strong{font-size:18px}}
 @media (max-width:980px){.hp-grid{min-height:0 !important;aspect-ratio:auto !important;grid-template-rows:auto;order:2}.h2-panel{order:1}.hp-card{aspect-ratio:1/.82}}
 @media (max-width:640px){.hp-grid{gap:8px}.hp-card{padding:12px 12px 11px;border-radius:16px}.hp-card strong{font-size:15.5px}.hp-card em{font-size:11.5px}.hp-num{font-size:11.5px}.hp-more{font-size:11px;padding:5px 10px}}
+
+/* 126차 수정: 숫자 표시 없이 냉장·냉동 카드 2개 */
+.hp-num{display:none !important}
+.hp-two{grid-template-columns:1fr 1fr !important;grid-template-rows:1fr !important}
+.hp-two .hp-card{padding:24px 22px 22px}
+.hp-two .hp-card strong{font-size:26px}
+.hp-two .hp-card em{font-size:14px}
+@media (max-width:980px){.hp-two .hp-card{aspect-ratio:3/4}}
+@media (max-width:640px){.hp-two .hp-card{padding:14px 13px 13px}.hp-two .hp-card strong{font-size:18px}.hp-two .hp-card em{font-size:12px}}
 </style>
 </head>
 <body>
@@ -2255,7 +2264,7 @@ html{scroll-behavior:smooth}
 <div class="wrap">
 <div class="h2-shell">
 <div class="h2-top">
-<div class="h2-photo hp-grid" aria-label="자판기 종류"><a class="hp-card" href="#machines" data-pick="0" style="--bg:url(images/img_04_5aedaa01d6.jpg);--pos:50% 50%"><span class="hp-num">01</span><strong>스마트 밴딩머신</strong><em>음료·간식 기본형</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="1" style="--bg:url(images/img_05_c55c056ea6.jpg);--pos:50% 50%"><span class="hp-num">02</span><strong>확장형 밴딩머신</strong><em>멀티자판기 구성</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="2" style="--bg:url(images/img_07_4082171e59.jpg);--pos:45% 40%"><span class="hp-num">03</span><strong>냉장·냉동 쇼케이스</strong><em>도시락·정육·밀키트</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="3" style="--bg:url(images/img_08_41f37782a3.jpg);--pos:50% 50%"><span class="hp-num">04</span><strong>굿즈 밴딩머신</strong><em>굿즈·특화 상품</em><span class="hp-more">자세히 보기 →</span></a></div>
+<div class="h2-photo hp-grid hp-two" aria-label="자판기 종류"><a class="hp-card" href="#machines" data-pick="0" style="--bg:url(images/img_05_c55c056ea6.jpg);--pos:50% 50%"><strong>냉장 자판기</strong><em>음료·간식·도시락</em><span class="hp-more">자세히 보기 →</span></a><a class="hp-card" href="#machines" data-pick="2" style="--bg:url(images/img_07_4082171e59.jpg);--pos:45% 40%"><strong>냉동 자판기</strong><em>냉동식품·정육·밀키트</em><span class="hp-more">자세히 보기 →</span></a></div>
 <div class="h2-panel">
 <div class="h2-status-row">
 <span class="h2-status"><i></i><span class="h2-ticker" aria-label="전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능"><span class="h2-ticker-track" aria-hidden="true"><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span><span>전국 설치 가능 · 무료 견적 · 2대 이상 설치 시 할인 가능</span></span></span></span>
