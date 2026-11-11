@@ -55,19 +55,19 @@
 - id: jeonbuk
   name: 전북
   intro: 전주·군산·익산·정읍 등에 사업장과 대학가가 있는 지역입니다. 구내식당이나 사무실처럼 이용자가 정해진 곳은 자주 찾는 상품부터 구성합니다.
-  page: /area/jeolla/
+  page: /area/jeonbuk/
 - id: jeonnam
   name: 전남
   intro: 여수 석유화학단지와 광양 제철소, 목포 상권 등 도시마다 공간 성격이 다른 지역입니다. PC카페 같은 매장은 영업시간에 맞춰 구성을 잡습니다.
-  page: /area/jeolla/
+  page: /area/jeonnam/
 - id: gyeongbuk
   name: 경북
   intro: 구미 국가산업단지와 포항 철강 산업, 안동·김천 생활권이 있는 지역입니다. 공장과 사무실은 근무 인원과 휴게 공간 위치를 기준으로 살펴봅니다.
-  page: /area/gyeongsang/
+  page: /area/gyeongbuk/
 - id: gyeongnam
   name: 경남
   intro: 창원 국가산업단지와 거제 조선소가 있는 지역입니다. 학교에 설치할 때는 판매할 수 있는 상품과 학교 측 허가를 먼저 확인합니다.
-  page: /area/gyeongsang/
+  page: /area/gyeongnam/
 - id: jeju
   name: 제주
   intro: 호텔과 리조트 등 숙박시설, 관광지 상점이 많은 지역입니다. 설치 장소와 일정은 공간 정보를 확인한 뒤 미리 상의하는 것이 좋습니다.
