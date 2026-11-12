@@ -2,6 +2,7 @@
 layout: area
 region: gyeonggi
 permalink: /area/gyeonggi/
+last_modified_at: 2026-11-11
 title: 경기 자판기 설치 — 화성·하남·양주·부천 설치사례
 h1: 경기 자판기 설치 안내
 description: 화성 코인노래방, 하남 치과의원, 양주 키즈카페, 부천 탕후루 매장 등 경기 지역 무인자판기 실제 설치사례와 매장·병원 설치 시 확인할 점을 정리했습니다.

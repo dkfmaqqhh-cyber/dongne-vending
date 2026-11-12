@@ -2,6 +2,7 @@
 layout: region
 region: chungnam
 permalink: /area/chungnam/
+last_modified_at: 2026-11-11
 h1: 충남 자판기 설치
 region_name: 충남
 title: 충남 자판기 설치 — 산업단지·넓은 사업장 설치 전 확인할 점

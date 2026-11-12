@@ -2,6 +2,7 @@
 layout: post
 title: "호텔 굿즈 자판기 설치, 로고 상품·기념품 구성과 어메니티 확인할 점"
 date: 2026-11-04
+last_modified_at: 2026-11-11
 tag: "공간별 설치"
 cover: "호텔 굿즈 / 자판기 설치"
 color: navy

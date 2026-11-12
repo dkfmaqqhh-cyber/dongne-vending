@@ -2,6 +2,7 @@
 layout: region
 region: seoul
 permalink: /area/seoul/
+last_modified_at: 2026-11-11
 h1: 서울 자판기 설치
 region_name: 서울
 title: 서울 자판기 설치 — 건물·학원가·무인매장 설치 전 확인할 점

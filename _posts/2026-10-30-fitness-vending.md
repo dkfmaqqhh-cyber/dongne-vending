@@ -2,6 +2,7 @@
 layout: post
 title: "운동센터·피트니스 자판기 설치, 헬스장·탁구장 위치와 운동 전후 상품 구성"
 date: 2026-10-30
+last_modified_at: 2026-11-11
 tag: "공간별 설치"
 cover: "운동센터 / 자판기 설치"
 color: teal

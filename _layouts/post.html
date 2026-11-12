@@ -20,6 +20,8 @@ layout: base
 <a class="pa-btn call" href="tel:01079902378">빠른 전화 연결</a>
 <a class="pa-btn quote" href="https://naver.me/GxrdxD4F" target="_blank" rel="noopener">무료 견적 신청</a>
 </div></div>
+{%- comment -%} 132차: 글 → 시·도 지역 페이지 연결 {%- endcomment -%}
+<nav class="ar-near pa-area" aria-label="지역별 설치 안내"><strong>지역별 자판기 설치 안내</strong>{% for a in site.data.regions %}{% if a.page %}<a href="{{ a.page | relative_url }}">{{ a.name }}</a>{% endif %}{% endfor %}<a href="{{ '/area/' | relative_url }}">전체 지역 보기</a></nav>
 {% assign others = site.posts | where_exp: "p", "p.url != page.url" %}
 {% if others.size > 0 %}<div class="pa-more"><h2>다른 정보 글</h2><div class="pl-grid">{% for p in others limit:3 %}{% include card.html p=p %}{% endfor %}</div></div>{% endif %}
 </div>

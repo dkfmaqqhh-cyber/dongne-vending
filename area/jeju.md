@@ -2,6 +2,7 @@
 layout: area
 region: jeju
 permalink: /area/jeju/
+last_modified_at: 2026-11-11
 title: 제주 자판기 설치 — 호텔 수영장 앞·상점 설치사례
 h1: 제주 자판기 설치 안내
 description: 제주 호텔 수영장 앞, 제주 상점 등 제주 지역 무인자판기 실제 설치사례와 관광객·외국인 손님이 많은 숙박·매장 설치 시 확인할 점을 정리했습니다.

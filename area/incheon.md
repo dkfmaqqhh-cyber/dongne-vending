@@ -2,6 +2,7 @@
 layout: region
 region: incheon
 permalink: /area/incheon/
+last_modified_at: 2026-11-11
 h1: 인천 자판기 설치
 region_name: 인천
 title: 인천 자판기 설치 — 공간별 확인할 점과 시·군·구 안내

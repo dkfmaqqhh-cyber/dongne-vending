@@ -2,6 +2,7 @@
 layout: region
 region: ulsan
 permalink: /area/ulsan/
+last_modified_at: 2026-11-11
 h1: 울산 자판기 설치
 region_name: 울산
 title: 울산 자판기 설치 — 사업장 휴게실·협력업체·기숙사 설치 전 확인할 점

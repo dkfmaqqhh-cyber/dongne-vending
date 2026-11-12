@@ -168,3 +168,7 @@ img{max-width:100%;height:auto}
 @media(max-width:900px){.rg-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.rg-hero-in{grid-template-columns:minmax(0,1fr);gap:22px;padding-top:26px;padding-bottom:30px}.rg-hero h1{font-size:32px}.rg-ph{width:240px;height:340px;margin:0 auto}.rg-ph.wide{width:100%;height:260px}.rg-st{grid-template-columns:minmax(0,1fr)}.rg-b h2,.rg-band h2,.rg-end h2{font-size:22px}}
 @media(max-width:640px){.rg-g{grid-template-columns:minmax(0,1fr);gap:12px}.rg-c h2{font-size:18px}}
+/* 132차: 글 하단 지역 링크, 지역 페이지 함께 볼 글 */
+.pa-area{margin:34px 0 0;padding-top:22px;border-top:1px solid #eadccb}
+.rg-more{margin:44px 0 0}
+.rg-more h2{font-size:21px}

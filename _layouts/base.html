@@ -23,6 +23,10 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}","image":"{% if page.thumbnail and page.thumbnail != "" %}{{ site.main_url }}{{ page.thumbnail }}{% else %}{{ site.main_url }}/images/img_02_649dbf922e.png{% endif %}","inLanguage":"ko-KR","author":{"@type":"Organization","name":"{{ site.author_name }}","url":"{{ site.main_url }}/"},"publisher":{"@type":"Organization","name":"동네자판기","logo":{"@type":"ImageObject","url":"{{ site.main_url }}/images/img_02_649dbf922e.png"}},"mainEntityOfPage":"{{ site.main_url }}{{ page.url }}"}
 </script>
+{%- comment -%} 132차: 글 경로 구조화 데이터(홈 > 정보 > 글) {%- endcomment -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"{{ site.main_url }}/"},{"@type":"ListItem","position":2,"name":"자판기 설치·운영 정보","item":"{{ site.main_url }}/posts/"},{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":"{{ site.main_url }}{{ page.url }}"}]}
+</script>
 {% if page.faq and page.faq.size > 0 %}<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
 </script>{% endif %}

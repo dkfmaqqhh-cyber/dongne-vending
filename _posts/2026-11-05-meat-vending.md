@@ -2,6 +2,7 @@
 layout: post
 title: "정육 자판기 설치, 냉장 고기 판매 전 보관 온도와 영업 신고 확인"
 date: 2026-11-05
+last_modified_at: 2026-11-11
 tag: "냉장·냉동"
 cover: "정육 자판기 / 설치 전 확인"
 color: red

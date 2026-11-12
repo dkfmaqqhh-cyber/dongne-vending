@@ -2,6 +2,7 @@
 layout: region
 region: sejong
 permalink: /area/sejong/
+last_modified_at: 2026-11-11
 h1: 세종 자판기 설치
 region_name: 세종
 sigungu_title: 세종 읍·면·동

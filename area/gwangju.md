@@ -2,6 +2,7 @@
 layout: region
 region: gwangju
 permalink: /area/gwangju/
+last_modified_at: 2026-11-11
 h1: 광주 자판기 설치
 region_name: 광주
 title: 광주 자판기 설치 — 건물·산업단지·생활권별 확인할 점

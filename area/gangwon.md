@@ -2,6 +2,7 @@
 layout: region
 region: gangwon
 permalink: /area/gangwon/
+last_modified_at: 2026-11-11
 h1: 강원 자판기 설치
 region_name: 강원
 title: 강원 자판기 설치 — 펜션·리조트·캠핑장 설치 전 확인할 점

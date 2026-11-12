@@ -2,6 +2,7 @@
 layout: region
 region: daejeon
 permalink: /area/daejeon/
+last_modified_at: 2026-11-11
 h1: 대전 자판기 설치
 region_name: 대전
 title: 대전 자판기 설치 — 연구기관·공공기관·대학가 설치 전 확인할 점

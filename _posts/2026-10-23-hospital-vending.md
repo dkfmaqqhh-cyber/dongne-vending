@@ -2,6 +2,7 @@
 layout: post
 title: "병원 자판기 설치, 대구·하남 사례로 본 대기실 위치와 상품 구성"
 date: 2026-10-23
+last_modified_at: 2026-11-11
 tag: "공간별 설치"
 cover: "병원·의원 / 자판기 설치"
 color: teal

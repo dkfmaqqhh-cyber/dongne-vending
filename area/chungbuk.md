@@ -2,6 +2,7 @@
 layout: region
 region: chungbuk
 permalink: /area/chungbuk/
+last_modified_at: 2026-11-11
 h1: 충북 자판기 설치
 region_name: 충북
 title: 충북 자판기 설치 — 무인카페·산업단지·대학가 설치 전 확인할 점

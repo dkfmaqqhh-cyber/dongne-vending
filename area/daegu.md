@@ -2,6 +2,7 @@
 layout: region
 region: daegu
 permalink: /area/daegu/
+last_modified_at: 2026-11-11
 h1: 대구 자판기 설치
 region_name: 대구
 title: 대구 자판기 설치 — 호텔·병원·학원·무인매장 설치 전 확인할 점

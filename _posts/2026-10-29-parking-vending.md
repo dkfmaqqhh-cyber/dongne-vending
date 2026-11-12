@@ -2,6 +2,7 @@
 layout: post
 title: "주차장 자판기 설치, 무인주차장·주차타워 위치와 상품 구성 정리"
 date: 2026-10-29
+last_modified_at: 2026-11-11
 tag: "공간별 설치"
 cover: "주차장 / 자판기 설치"
 color: navy

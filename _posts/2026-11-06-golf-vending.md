@@ -2,6 +2,7 @@
 layout: post
 title: "골프장 자판기 설치, 클럽하우스·그늘집 위치와 상품 구성 정리"
 date: 2026-11-06
+last_modified_at: 2026-11-11
 tag: "공간별 설치"
 cover: "골프장 / 자판기 설치"
 color: olive

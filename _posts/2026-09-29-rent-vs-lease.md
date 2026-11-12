@@ -2,6 +2,7 @@
 layout: post
 title: "자판기 렌탈·임대·구매 차이, 우리 공간에는 어떤 방식이 맞을까?"
 date: 2026-09-29 11:00:00 +0900
+last_modified_at: 2026-11-11
 tag: "도입 방식"
 cover: "임대·렌탈·구매 / 무엇이 다를까?"
 color: orange

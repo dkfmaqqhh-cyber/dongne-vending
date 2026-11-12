@@ -2,6 +2,7 @@
 layout: region
 region: busan
 permalink: /area/busan/
+last_modified_at: 2026-11-11
 h1: 부산 자판기 설치
 region_name: 부산
 title: 부산 자판기 설치 — 숙박시설·항만·대학가 설치 전 확인할 점
