@@ -2272,6 +2272,19 @@ html{scroll-behavior:smooth}
   .hp-two .hp-card strong{font-size:18px !important;margin-bottom:6px !important}
   .hp-feat{margin-bottom:10px;gap:3px}.hp-feat li{font-size:11.5px;padding-left:10px}.hp-feat li::before{width:4px;height:4px}
 }
+/* 133차: PC 첫 화면 — 자판기 카드 넓게(약 58%), 갈색 안내 패널 좁게. 모바일(980px 이하)은 그대로 */
+@media (min-width:981px){
+  .h2-top{grid-template-columns:1.4fr 1fr}
+  .hp-grid{min-height:560px}
+  .h2-panel{padding:28px 28px 26px}
+  .h2-title{font-size:46px !important}
+  .h2-sub{font-size:15.5px;margin-bottom:20px}
+}
+@media (min-width:981px) and (max-width:1240px){
+  .hp-grid{min-height:500px}
+  .h2-panel{padding:24px 22px 22px}
+  .h2-title{font-size:38px !important}
+}
 </style>
 </head>
 <body>
