@@ -2,7 +2,7 @@
   name: 서울
   intro: 오피스 빌딩과 학원가, 대학가, 역세권 상가가 많은 지역입니다. 건물 공용 공간처럼 자리가 한정된 곳은 설치 위치와 관리 주체 허락부터 확인합니다.
   page: /area/seoul/
-  posts: [items-by-space, multi-vending, apartment-vending]
+  posts: [mapo-unmanned-store-vending, multi-vending, apartment-vending]
 - id: busan
   name: 부산
   intro: 해운대·광안리 일대 숙박시설과 항만·물류 시설, 대학가가 함께 있는 지역입니다. 관광객과 직장인 등 이용하는 사람에 따라 상품 구성이 달라집니다.
